@@ -1,0 +1,127 @@
+gene	gene_id	contig	strand	marker_type	codon	ref_aa	wt_aa	ref_status	genomic_start	genomic_end	note	drugs
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	72	C			403612	403614	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	73	V			403615	403617	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	74	M			403618	403620	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	75	N			403621	403623	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	76	K	K	REF=WT	403624	403626	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	93	T			403675	403677	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	97	H			403687	403689	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	101	C			403699	403701	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	144	A			404007	404009	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	145	F			404010	404012	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	160	L			404055	404057	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	194	I			404329	404331	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	218	I			404401	404403	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	220	A			404407	404409	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	271	Q			404836	404838	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	326	N			405361	405363	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	343	M			405560	405562	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	350	C			405581	405583	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	352	Q			405587	405589	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	353	G			405590	405592	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	356	I			405599	405601	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	367	G			405825	405827	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP	371	R			405837	405839	ok	chloroquine/amodiaquine/piperaquine/quinine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP+CNV	86	N	N	REF=WT	958145	958147	ok	amodiaquine/chloroquine/lumefantrine/mefloquine/quinine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP+CNV	184	Y			958439	958441	ok	amodiaquine/chloroquine/lumefantrine/mefloquine/quinine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP+CNV	1034	S			960989	960991	ok	amodiaquine/chloroquine/lumefantrine/mefloquine/quinine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP+CNV	1042	N			961013	961015	ok	amodiaquine/chloroquine/lumefantrine/mefloquine/quinine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP+CNV	1246	D			961625	961627	ok	amodiaquine/chloroquine/lumefantrine/mefloquine/quinine
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	252	E			1726242	1726244	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	413	P			1725759	1725761	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	438	K			1725684	1725686	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	441	P			1725675	1725677	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	446	F			1725660	1725662	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	449	G			1725651	1725653	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	458	N			1725624	1725626	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	469	C			1725591	1725593	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	476	M			1725570	1725572	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	493	Y			1725519	1725521	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	495	F			1725513	1725515	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	508	T			1725474	1725476	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	511	Y			1725465	1725467	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	515	R			1725453	1725455	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	527	P			1725417	1725419	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	533	G			1725399	1725401	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	537	N			1725387	1725389	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	538	G			1725384	1725386	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	539	R			1725381	1725383	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	543	I			1725369	1725371	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	553	P			1725339	1725341	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	561	R			1725315	1725317	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	568	V			1725294	1725296	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	574	P			1725276	1725278	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	577	S			1725267	1725269	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	579	M			1725261	1725263	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	580	C	C	REF=WT	1725258	1725260	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	582	A			1725252	1725254	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	584	D			1725246	1725248	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	585	N			1725243	1725245	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	613	Q			1725159	1725161	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	622	R			1725132	1725134	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	625	G			1725123	1725125	ok	artemisinins
+pfk13	PF3D7_1343700	NC_004331.3	-	SNP	675	A			1724973	1724975	ok	artemisinins
+pfcoronin	PF3D7_1251200	NC_037284.1	+	SNP	50	G			2092570	2092572	ok	artemisinins
+pfcoronin	PF3D7_1251200	NC_037284.1	+	SNP	100	R			2092720	2092722	ok	artemisinins
+pfcoronin	PF3D7_1251200	NC_037284.1	+	SNP	107	E			2092741	2092743	ok	artemisinins
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	16	A			748133	748135	ok	pyrimethamine/cycloguanil/SP
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	50	C			748235	748237	ok	pyrimethamine/cycloguanil/SP
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	51	N			748238	748240	ok	pyrimethamine/cycloguanil/SP
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	59	C			748262	748264	ok	pyrimethamine/cycloguanil/SP
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	108	S	S	REF=WT	748409	748411	ok	pyrimethamine/cycloguanil/SP
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP	164	I			748577	748579	ok	pyrimethamine/cycloguanil/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	431	I	I	REF=WT	549666	549668	ok	sulfadoxine/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	436	S	S	REF=WT	549681	549683	ok	sulfadoxine/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	437	G	A	REF_CARRIES_NONWT(G)	549684	549686	ok	sulfadoxine/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	540	K	K	REF=WT	549993	549995	ok	sulfadoxine/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	581	A	A	REF=WT	550116	550118	ok	sulfadoxine/SP
+pfdhps	PF3D7_0810800	NC_004329.3	+	SNP	613	A	A	REF=WT	550212	550214	ok	sulfadoxine/SP
+pfgch1	PF3D7_1224000	NC_037284.1	+	CNV	whole-CDS				974372	975541	aa_len=390	pyrimethamine(modulator)
+pfpm2	PF3D7_1408000	NC_037283.1	+	CNV	whole-CDS				293471	294832	aa_len=454	piperaquine
+pfpm3	PF3D7_1408100	NC_037283.1	+	CNV	whole-CDS				297468	298823	aa_len=452	piperaquine
+pfhrp2	PF3D7_0831800	NC_004329.3	-	DEL	whole-CDS				1374236	1375299	aa_len=306	diagnostic(RDT)
+pfhrp3	PF3D7_1372200	NC_004331.3	-	DEL	whole-CDS				2840727	2841703	aa_len=276	diagnostic(RDT)
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	133	M			3888	3890	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	268	Y			4293	4295	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	271	L			4302	4304	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	272	K			4305	4307	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	275	P			4314	4316	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	280	G			4329	4331	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	283	I			4338	4340	ok	atovaquone
+pfcytb	PfMT_CYTB	NC_002375.1	+	SNP	284	V			4341	4343	ok	atovaquone
+pvmdr1	PVP01_1010900	LT635621.1	-	SNP+CNV	958	M	T	REF_CARRIES_NONWT(M)	480260	480262	ok	chloroquine/mefloquine
+pvmdr1	PVP01_1010900	LT635621.1	-	SNP+CNV	976	F	Y	REF_CARRIES_NONWT(F)	480206	480208	ok	chloroquine/mefloquine
+pvmdr1	PVP01_1010900	LT635621.1	-	SNP+CNV	1076	L	F	REF_CARRIES_NONWT(L)	479906	479908	ok	chloroquine/mefloquine
+pvcrt	PVP01_0109300	LT635612.1	+	SNP	10	G			442252	442254	ok	chloroquine
+pvdhfr	PVP01_0526600	LT635616.1	+	SNP	57	F	F	REF=WT	1077530	1077532	ok	pyrimethamine/SP
+pvdhfr	PVP01_0526600	LT635616.1	+	SNP	58	R	S	REF_CARRIES_NONWT(R)	1077533	1077535	ok	pyrimethamine/SP
+pvdhfr	PVP01_0526600	LT635616.1	+	SNP	61	T	T	REF=WT	1077542	1077544	ok	pyrimethamine/SP
+pvdhfr	PVP01_0526600	LT635616.1	+	SNP	117	N	S	REF_CARRIES_NONWT(N)	1077710	1077712	ok	pyrimethamine/SP
+pvdhfr	PVP01_0526600	LT635616.1	+	SNP	173	I	I	REF=WT	1077878	1077880	ok	pyrimethamine/SP
+pvdhps	PVP01_1429500	LT635625.1	-	SNP	382	S	S	REF=WT	1270913	1270915	ok	sulfadoxine/SP
+pvdhps	PVP01_1429500	LT635625.1	-	SNP	383	G	A	REF_CARRIES_NONWT(G)	1270910	1270912	ok	sulfadoxine/SP
+pvdhps	PVP01_1429500	LT635625.1	-	SNP	512	K	K	REF=WT	1270523	1270525	ok	sulfadoxine/SP
+pvdhps	PVP01_1429500	LT635625.1	-	SNP	553	A	A	REF=WT	1270400	1270402	ok	sulfadoxine/SP
+pvdhps	PVP01_1429500	LT635625.1	-	SNP	585	V	V	REF=WT	1270304	1270306	ok	sulfadoxine/SP
+pvk12	PVP01_1211100	LT635623.1	+	REGION	whole-CDS				484785	486923	aa_len=713	artemisinin(surveillance)
+pvcytb	PVP01_MIT03400	LT635627.1	+	SNP	whole-CDS				4782	5912	aa_len=377	atovaquone
+pvubp1	PVP01_0210400	LT635613.1	-	REGION	whole-CDS				413850	425258	aa_len=3696	candidate(multiple)
+pfcrt	PF3D7_0709000	NC_004328.3	+	SNP-candidate	333	T	T	REF=WT	405382	405384	ART/PPQ background marker (MalariaGEN Pf8)	artemisinin-background/piperaquine
+pfmdr1	PF3D7_0523000	NC_004326.2	+	SNP-candidate	1226	F	F	REF=WT	961565	961567	ART/PPQ background marker (MalariaGEN Pf8)	antimalarial-background
+pfdhfr	PF3D7_0417200	NC_004318.2	+	SNP-candidate	306	S	S	REF=WT	749003	749005	ART/PPQ background marker (MalariaGEN Pf8)	SP-background
+pfexo	PF3D7_1362500	NC_004331.3	+	SNP-candidate	415	E	E	REF=WT	2504559	2504561	ART/PPQ background marker (MalariaGEN Pf8)	piperaquine-background
+pfarps10	PF3D7_1460900.1	NC_037283.1	+	SNP-candidate	127	V	V	REF=WT	2481070	2481072	ART/PPQ background marker (MalariaGEN Pf8)	artemisinin-background
+pfarps10	PF3D7_1460900.1	NC_037283.1	+	SNP-candidate	128	D	D	REF=WT	2481073	2481075	ART/PPQ background marker (MalariaGEN Pf8)	artemisinin-background
+pffd	PF3D7_1318100	NC_004331.3	-	SNP-candidate	193	D	D	REF=WT	748393	748395	ART/PPQ background marker (MalariaGEN Pf8)	artemisinin-background
+pfmdr2	PF3D7_1447900	NC_037283.1	-	SNP-candidate	484	T	T	REF=WT	1956224	1956226	ART/PPQ background marker (MalariaGEN Pf8)	artemisinin-background
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	57	F	F	REF=WT	1292021	1292023	F57L; ~PfN51	pyrimethamine/SP
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	58	R	S	REF_CARRIES_NONWT(R)	1292024	1292026	S58R; ~PfC59R; REF carries R	pyrimethamine/SP
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	114	N	S	REF_CARRIES_NONWT(N)	1292192	1292194	S114N; ~PfS108N; REF carries N	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	15	A	A	REF=WT	762499	762501	A15S	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	57	F	F	REF=WT	762625	762627	F57L; ~PfN51	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	58	S	S	REF=WT	762628	762630	S58R; ~PfC59R	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	113	S	S	REF=WT	762793	762795	S113N/T; ~PfS108N	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	15	A	A	REF=WT	843857	843859	A15S	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	57	F	F	REF=WT	843983	843985	F57L; ~PfN51	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	58	S	S	REF=WT	843986	843988	S58R; ~PfC59R	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	113	S	S	REF=WT	844151	844153	S113N/T; ~PfS108N	pyrimethamine/SP

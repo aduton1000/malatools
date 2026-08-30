@@ -1,0 +1,935 @@
+LOCUS       NC_002375               5967 bp    DNA     linear   INV 01-FEB-2010
+DEFINITION  Plasmodium falciparum mitochondrion, complete genome.
+ACCESSION   NC_002375
+VERSION     NC_002375.1
+DBLINK      Project: 148
+            BioProject: PRJNA148
+KEYWORDS    RefSeq; COI gene; coxI gene; coxIII gene; cytochrome oxidase I;
+            cytochrome oxidase III.
+SOURCE      mitochondrion Plasmodium falciparum (malaria parasite P.
+            falciparum)
+  ORGANISM  Plasmodium falciparum
+            Eukaryota; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium (Laverania).
+REFERENCE   1  (bases 1 to 5967)
+  AUTHORS   Conway,D.J., Fanello,C., Lloyd,J.M., Al-Joubori,B.M., Baloch,A.H.,
+            Somanath,S.D., Roper,C., Oduola,A.M., Mulder,B., Povoa,M.M.,
+            Singh,B. and Thomas,A.W.
+  TITLE     Origin of Plasmodium falciparum malaria is traced by mitochondrial
+            DNA
+  JOURNAL   Mol. Biochem. Parasitol. 111 (1), 163-171 (2000)
+   PUBMED   11087926
+REFERENCE   2  (bases 1 to 5967)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (03-DEC-2003) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 5967)
+  AUTHORS   Conway,D.J.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-MAR-2000) Conway D.J., Infectious and Tropical
+            Diseases, London School of Hygiene and Tropical Medicine, Keppel
+            St., London, WC1E 7HT, UNITED KINGDOM
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AJ276844.
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..5967
+                     /organism="Plasmodium falciparum"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /strain="NF54"
+                     /db_xref="taxon:5833"
+     gene            complement(734..1573)
+                     /gene="coxIII"
+                     /locus_tag="PlfaoMp1"
+                     /db_xref="GeneID:2655542"
+     CDS             complement(734..>1573)
+                     /gene="coxIII"
+                     /locus_tag="PlfaoMp1"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="putative cytochrome oxidase III"
+                     /protein_id="NP_059666.1"
+                     /db_xref="UniProtKB/TrEMBL:Q9MDY3"
+                     /db_xref="GeneID:2655542"
+                     /translation="SSIYTITCYPRRTFLPLYVYGTLSHRSYKFILFSNLSNIKAHLV
+                     SYPALTSLYGTSLKYFSVGILFTFNPIILLIFVYSIRESFYSVFSSLTSGMLSIIISE
+                     ALLFFTYFWGILHFSLSPYPLSNEGIIITSSRMLILTITFILASASCMTACLQVFIEK
+                     GMSFEISSIICIIYLLGECFASLQTTEYLHLSYHINDTVYTTLFYCVTGLHFSHVVIG
+                     LLLLIIYFIRIIEIYDTSTEWFINSFGISYIVIPHTDQITILYWHFVEIVWLFIEFLF
+                     YSE"
+     gene            1933..3471
+                     /gene="coI"
+                     /locus_tag="PlfaoMp2"
+                     /db_xref="GeneID:2655540"
+     CDS             <1933..3471
+                     /gene="coI"
+                     /locus_tag="PlfaoMp2"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="putative cytochrome oxidase I"
+                     /protein_id="NP_059667.1"
+                     /db_xref="UniProtKB/TrEMBL:Q9MDJ2"
+                     /db_xref="GeneID:2655540"
+                     /translation="RLTWMDNTRLFQSITAVAGTVWIKYFSFISEPHVIFIVLNRYSL
+                     ITNCNHKTLGLYYLWFSFLFGSYGFLLSVILRTELYSSSLRIIAQENVNLYNMIFTIH
+                     GIIMIFFNIMPGLFGGFGNYFLPILCGSPELAYPRINSISLLLQPIAFVLVILSTAAE
+                     FGGGTGWTLYPPLSTSLMSLSPVAVDVIIFGLLVSGVASIMSSLNFITTVMHLRAKGL
+                     TLGILSVSTWSLIITSGMLLLTLPVLTGGVLMLLSDLHFNTLFFDPTFAGDPILYQHL
+                     FWFFGHPEVYILILPAFGVISHVISTNYCRNLFGNQSMILAMGCIAVLGSLVWVHHMY
+                     TTGLEVDTRAYFTSTTILISIPTGTKVFNWICTYMSSNFGMIHSSSLLSLLFICTFTF
+                     GGTTGVILGNAAIDVALHDTYYVIAHFHFVLSIGAIIGLFTTVSAFQDNFFGKNLREN
+                     SIVILWSMLFFVGVILTFLPMHFLGFNVMPRRIPDYPDALNGWNMICSIGSTMTLFGL
+                     LIFK"
+     gene            3492..4622
+                     /gene="CYTB"
+                     /locus_tag="PlfaoMp3"
+                     /db_xref="GeneID:2655541"
+     CDS             3492..4622
+                     /gene="CYTB"
+                     /locus_tag="PlfaoMp3"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome b"
+                     /protein_id="NP_059668.1"
+                     /db_xref="GeneID:2655541"
+                     /translation="MNFYSINLVKAHLINYPCPLNINFLWNYGFLLGIIFFIQIITGV
+                     FLASRYTPDVSYAYYSIQHILRELWSGWCFRYMHATGASLVFLLTYLHILRGLNYSYM
+                     YLPLSWISGLILFMIFIVTAFVGYVLPWGQMSYWGATVITNLLSSIPVAVIWICGGYT
+                     VSDPTIKRFFVLHFILPFIGLCIVFIHIFFLHLHGSTNPLGYDTALKIPFYPNLLSLD
+                     VKGFNNVIILFLIQSLFGIIPLSHPDNAIVVNTYVTPSQIVPEWYFLPFYAMLKTVPS
+                     KPAGLVIVLLSLQLLFLLAEQRSLTTIIQFKMIFGARDYSVPIIWFMCAFYALLWIGC
+                     QLPQDIFILYGRLFIVLFFCSGLFVLVHYRRTHYDYSSQANI"
+ORIGIN      
+        1 aagcttttgg tatctcgtaa tgtagaacaa tattgagttg accgtcaaat ccttttcatt
+       61 aaaagagtgg attaaatgcc cagccaacac catccaattt gattgggaat tatctgtgtt
+      121 acaaattttt gatcccaggc tggtaaaaaa tgtaaacttt tagcccataa gaatagaaac
+      181 agatgccagg ccaataactc aaacagagct atgacgctat caatttttag caagacggat
+      241 aaatttttca tagaacttaa cgtatcatca tccatgcaaa gataaaacgg tagataggga
+      301 acaaactgcc tcaagacgtt cttaacccag ctcacgcatc gcttctaacg gtgaactctc
+      361 attccaatgg aaccttgttc aagttcaaat agattggtaa ggtatagtgt ttactatcaa
+      421 atgaaacaat gtgttccacc gctagtgttt gcttctaaca ttccacttgc ttataactgt
+      481 atggacgtaa cctccaggca aagaaaatga ccggtcaaaa cggaatcaat taactatgga
+      541 tagctgatac tatcaattta tcattactca agtcagcata gtatatatga aggtttctat
+      601 ggaaacacac ttcccttctc gccatttgat agcggttaac ctttcctttt ccttacgtac
+      661 tctagctatg aacacaattg tctattcgta caattattca tatatatatt tgaaacagga
+      721 catacatgtt catttattct gaatagaata agaactctat aaataaccag actatttcaa
+      781 caaaatgcca atataaaatt gtaatttgat cagtgtgagg tataacaata tatgatatac
+      841 cgaaagaatt tataaaccat tcggtagaag tatcatatat ttctattatt cttataaagt
+      901 atattattaa taataataaa cctattacta catgagaaaa atgtaatcct gtaacacaat
+      961 aaaataatgt agtatataca gtatcattta tatgatatga taaatgtaaa tactctgtag
+     1021 tttgtagaga tgcaaaacat tctcctaata agtatattat acaaataata ctagagattt
+     1081 caaaactcat tcctttttct ataaatactt gtaaacatgc agtcatacat gatgcactag
+     1141 ctaatataaa tgtaattgtt aagattaaca ttcttgatga agtaatgata ataccttcat
+     1201 tacttaatgg atatggtgat aaactaaaat gtaatatacc ccaaaaatat gtaaagaata
+     1261 ataaagcttc tgatattatg atagataaca taccagaagt taaagatgaa aatacagaat
+     1321 aaaaactttc tcgaatagaa tatacaaata ttaataggat tatagggtta aatgtaaata
+     1381 atatccctac agaaaagtat tttaaagatg taccatataa tgatgttaat gcaggatatg
+     1441 aaactagatg tgcttttata tttgataaat tactaaataa aataaattta taagaacggt
+     1501 gagataatgt gccgtaaaca tataacggta agaaggttcg ccggggataa caggttatag
+     1561 tatatataga gctctaatct ttatatacta ttggcacctc catgtcgtct catcgcagcc
+     1621 ttgcaataaa taatatctag cgtgtattgt tgccttgtac acaccgctcg tcacgcaata
+     1681 tcaatatact gggtatagaa ctccaggcgt taacctgtag agttgagatg gaaacagccg
+     1741 gaaaggtaat tttacgccct taacgtaaag atcatttatg aaatagatta gcatgggact
+     1801 aaaaaatgtt atgttgttgg tttaagccct attaccatac aagagatcgc gtactttgga
+     1861 ccgaataaag ctgtgaggaa actacattaa aggaactcga ctggcctaca ctataagaac
+     1921 gaacgctttt aacgcctgac atggatggat aatactcgac tcttccaaag tataaccgct
+     1981 gtcgctggga ctgtatggat caaatatttc tcatttatat ccgagcctca tgttattttt
+     2041 attgttttaa atagatattc acttattaca aattgtaacc ataaaacttt aggattatac
+     2101 tatttatggt tttcattttt atttggtagt tatggatttt tattatcagt aatactacgt
+     2161 actgaattat attcttcatc tttaagaata attgcacaag aaaatgtaaa tctatataat
+     2221 atgatattta caattcacgg aataattatg atttttttca atataatgcc aggattattc
+     2281 ggaggatttg gtaattactt tctacctatt ttatgtggat ctccagaatt agcatatcct
+     2341 agaattaata gtatatcttt actgttacaa ccaattgctt ttgttttagt tatattatct
+     2401 actgcagcag aatttggtgg tggaactgga tggactttat atccaccatt aagtacatct
+     2461 ttaatgtcat tatctcctgt agctgtagat gtaataattt ttggtttatt agtatctgga
+     2521 gtcgctagta ttatgtcttc attaaatttt attactacag taatgcattt aagagcaaaa
+     2581 ggattaacac ttggtatatt aagtgtttct acatggtcat tgatcattac atcaggaatg
+     2641 ttattgctaa cactaccggt tttaactgga ggagtattaa tgttattatc agacttacat
+     2701 tttaatactt tattttttga cccaacattt gcaggagatc caatattata tcaacattta
+     2761 ttctggtttt ttggacatcc tgaagtatac attttaatat tacctgcttt tggagtaatt
+     2821 agtcatgtaa tttctactaa ttattgcaga aatctatttg gtaatcaatc tatgatactt
+     2881 gctatgggat gtatagctgt tttaggaagc ttagtatggg tacatcatat gtacactact
+     2941 ggtttagaag ttgatactag agcttatttt acttcgacta ccattttaat atcaatacct
+     3001 accggtacaa aagtatttaa ctggatatgt acatatatga gtagtaattt tggtatgata
+     3061 cacagctctt cattattgtc attattattt atatgtacat ttacatttgg aggtactact
+     3121 ggagttatat taggtaatgc tgccattgat gtagcattac atgacacata ttatgttatt
+     3181 gctcatttcc attttgtact atcaattggt gcaattattg gattatttac aactgtaagt
+     3241 gcatttcaag ataatttctt tggtaaaaac ttacgtgaaa attctattgt aatactatgg
+     3301 tcaatgttat tttttgtagg tgtaatatta acatttttac ctatgcattt tttaggattt
+     3361 aatgtaatgc ctagacgtat tcctgattat ccagacgctt taaatggatg gaatatgatt
+     3421 tgttctattg ggtcaacaat gactttattt ggtttactaa tttttaaata atattactat
+     3481 ttattgtttt tatgaacttt tactctatta atttagttaa agcacactta ataaattacc
+     3541 catgtccatt gaacataaac tttttatgga attacggatt ccttttagga ataatatttt
+     3601 ttattcaaat tataacaggt gtatttttag caagtcgata tacaccagat gtttcatatg
+     3661 catattatag tatacaacac attttaagag aattatggag tggatggtgt tttagataca
+     3721 tgcacgcaac aggtgcttct cttgtatttt tattaacata tcttcatatt ttaagaggat
+     3781 taaattactc atatatgtat ttaccattat catggatatc tggattgatt ttatttatga
+     3841 tatttattgt aactgctttc gttggttatg tcttaccatg gggtcaaatg agttattggg
+     3901 gtgcaactgt aattactaac ttgttatcct ctattccagt agcagtaatt tggatatgtg
+     3961 gaggatatac tgtgagtgat cctacaataa aacgattttt tgtactacat tttatcttac
+     4021 catttattgg attatgtatt gtatttatac atatattttt cttacattta catggtagca
+     4081 caaatccttt agggtatgat acagcattaa aaataccctt ttatccaaat ctattaagtc
+     4141 ttgatgttaa aggatttaat aatgttataa ttttatttct aatacaaagt ttatttggaa
+     4201 ttataccttt atcacatcct gataatgcta tcgtagtaaa tacatatgtt actccatctc
+     4261 aaattgtacc tgaatggtac tttctaccat tttatgcaat gttaaaaact gttccaagta
+     4321 aaccagctgg tttagtaatt gtattattat cattacaatt attattctta ttagcagaac
+     4381 aaagaagttt aacaactata attcaattta aaatgatttt tggtgctaga gattattctg
+     4441 ttcctattat atggtttatg tgtgcattct atgctttatt atggattgga tgtcaattac
+     4501 cacaagatat attcatttta tatggtcgat tatttattgt attatttttc tgtagtggtt
+     4561 tatttgtact tgttcattat agacgaacac attatgatta cagctcccaa gcaaacatat
+     4621 aatattacaa gattgtgata agatgacatt tctgagtatt gagcggaaca aatcagaccg
+     4681 taaggttata attatgtact atgattggaa aatataacta tagttaccat agctgtagat
+     4741 ggatgcttcg atatatagta tattacagta tcaatcggat ttacatgctc agccgccaaa
+     4801 aactataacg atattattac cgtacaagcc gttagcaaga catgataggg agttggcaag
+     4861 ttaaagaagt tctggtttat aatagatacg ttattaatgt taggatgtat gggatatttg
+     4921 tagtacacct tgattggttt tactatttat atttatcgat aaatgttcgg tattgcatgc
+     4981 ctggtgtttt taatatagac gctgacttcc tggctaaact tcccaatgat atatcttcca
+     5041 aatagatttc gcagaaaacc gtctatattc atgtttgatt gacctttaac cactaattac
+     5101 gaatcttcca agaatatttt aagagtccaa ggttcggtct attattttcc tgttctgtaa
+     5161 ttagatcaca tgttttatag ttcatggaga catggctata accactattc atagagacaa
+     5221 ctaatggaat ctctctcgat ttccagatgt tgagttacta agaggattct ctccacactt
+     5281 caattcgtac ttccactacc agaatatact ctcctgttct aaaattctag gatttttcgc
+     5341 gttttttcag gagaaatccg tatatcgatg tcttttaatc aatgctattg gattcaacgt
+     5401 ccaggacttc ctgacgctta ataacgattt ctacttccag cagccatttt tggttcagct
+     5461 acaagttcac tgtcaactac catgttacga cttcgcaccg actgtttctt ttacctcacg
+     5521 agtcgatcag gaaggtttca tccttaaatc tcgtaaccat gccaacacat aagaactttt
+     5581 agggaagtta aggtgctcag ggtcttaccg tcgggccgta tgattccaca tattcatgga
+     5641 taattctatt tattaggagt ctcacactag cgacaatggg gaagtcgtta caccgttcat
+     5701 gcaggacgga gattacccga caaggaattt tgctacctta ggaccgttta aaatacagcc
+     5761 gccgtttatc attgatgccg ggcagatgtc agtaacttga aatattcatc agaattatca
+     5821 gtgacttgtg ttgtaacctt acagacgctt ccagtaattt aacttcttat aaatggaagc
+     5881 gccggtttcc cgggtatcca atccagtgct ccattcaagg catagagact cagcctatgt
+     5941 tcaactttgt agagttatat tataata
+//
+
+LOCUS       NC_007243               5990 bp    DNA     circular INV 03-APR-2023
+DEFINITION  Plasmodium vivax SaI-1 mitochondrion, complete genome.
+ACCESSION   NC_007243
+VERSION     NC_007243.1
+DBLINK      BioProject: PRJNA927338
+KEYWORDS    RefSeq.
+SOURCE      mitochondrion Plasmodium vivax Sal-1
+  ORGANISM  Plasmodium vivax Sal-1
+            Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium.
+REFERENCE   1  (bases 1 to 5990)
+  AUTHORS   Jongwutiwes,S., Putaporntip,C., Iwasaki,T., Ferreira,M.U.,
+            Kanbara,H. and Hughes,A.L.
+  TITLE     Mitochondrial genome sequences support ancient population expansion
+            in Plasmodium vivax
+  JOURNAL   Mol. Biol. Evol. 22 (8), 1733-1739 (2005)
+   PUBMED   15901839
+REFERENCE   2  (bases 1 to 5990)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-AUG-2005) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 5990)
+  AUTHORS   Jongwutiwes,S.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (13-APR-2004) Parasitology, Faculty of Medicine,
+            Chulalongkorn University, Rama 4, Pathumwan, Bangkok 10330,
+            Thailand
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence was derived from AY598140.
+            
+            On Nov 11, 2009 this sequence version replaced gi:266630552.
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..5990
+                     /organism="Plasmodium vivax Sal-1"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /strain="Salvador I"
+                     /db_xref="taxon:126793"
+                     /geo_loc_name="El Salvador"
+     gene            complement(1998..2789)
+                     /gene="cox3"
+                     /locus_tag="PlvioMp1"
+                     /db_xref="GeneID:3562405"
+     CDS             complement(1998..2789)
+                     /gene="cox3"
+                     /locus_tag="PlvioMp1"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome oxidase subunit 3"
+                     /protein_id="YP_272126.1"
+                     /db_xref="GeneID:3562405"
+                     /translation="MLTAHKITVLINIFFIFSNYNNIKAHLVSYPSLTSLYGTSLKYF
+                     SVGILFTFNPIIFIIFVYSIRESFYSIFSSLVSGMLSIIISEAILFITYFWGILHFSL
+                     SPYPLYNEGIILTSSRMLILTITFILASASCMTACLQFLIEKGMSLEISSIVFIIYLL
+                     GECFASLQTTEYLHLGYCINDAISGTLFYCVTGLHFSHVIVGLLLLLIYFIRIVEMYD
+                     TNSEWSYSLYGISYIVLPHTDQITILYWHFVEIVWLFIEFFFYSE"
+     gene            <3328..4761
+                     /gene="cox1"
+                     /locus_tag="PlvioMp2"
+                     /db_xref="GeneID:3562406"
+     CDS             <3328..4761
+                     /gene="cox1"
+                     /locus_tag="PlvioMp2"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome oxidase subunit 1"
+                     /protein_id="YP_272127.1"
+                     /db_xref="GeneID:3562406"
+                     /translation="FFVFNRYTLITNCNHKTLGLYYLWFSFLFGSYGFLLSVILRTEL
+                     YSSSLRIIAQENVNLYNMIFTLHGIIMIFFNIMPGLFGGFGNYFLPILCGSPELAYPR
+                     INSISLLLQPIAFILVILSTAAEFGGGTGWTLYPPLSTSLMSLSPVAVDVIIVGLLVS
+                     GIASIMSSLNFITTVMHLRSKGLTLGILSVSTWSLIITSVMLLLTLPVLTGGVLMLLS
+                     DLHFNTLFFDPTFAGDPILYQHLFWFFGHPEVYILILPAFGVISHVISTNYCRSLFGN
+                     QSMILAMSCIAILGSVVWAHHMYTTGLEVDTRAFFTSTTILISIPTGTKIFNWICTYM
+                     GSNFGITHSSSLLSLLFICTFTFGGTTGVILGNAAIDIALHDTYYVIAHFHFVLSIGA
+                     IIGLFTLVSSFQENFFGKHLRENSIIILWSILFFIGVVLTFLPMHFLGFNVMPRRIPD
+                     YPDALNGWNMICSIGSTMTLFGLFIFK"
+     gene            4783..5931
+                     /gene="cytb"
+                     /locus_tag="PlvioMp3"
+                     /db_xref="GeneID:3562407"
+     CDS             4783..5931
+                     /gene="cytb"
+                     /locus_tag="PlvioMp3"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome b"
+                     /protein_id="YP_272128.1"
+                     /db_xref="GeneID:3562407"
+                     /translation="MNYYSINLAKAHLLNYPCPLNINFLWNYGFLLGIIFFIQILTGV
+                     FLASRYTPEISYAYYSIQHILRELWSGWCFRYMHATGASLVFLLTYLHILRGLNYSYL
+                     YLPLSWISGLIIFALFIVTAFIGYVLPWGQMSYWGATVITNLLSSIPVLVIWLCGGYT
+                     VSDPTIKRFFVLHFILPFVALCIVFIHIFFLHLHGSTNPLGYDTALKIPFYPNLLSLD
+                     VKGFNNIFILFLLQSIFGIIPLSHPDNAILVNTYVTPIQIVPEWYFLPFYAMLKTIPS
+                     KTAGLLIVLASLQLLFLLAEQRSLTTIIQFKMTFGAREYSVPMIWFMCSFYALLWIGC
+                     QLPQDIFILYGRLFIISFFSSGLFALVHYKRTHYDYSSQANIKITRLR"
+ORIGIN      
+        1 aagttaggat aatgaaatta tagttaccat agctgtagat ggatgcttcg atatattata
+       61 tatttaagta ttaatcgaga ttacatgctc agccgccaaa aatataacga tattattacc
+      121 gtacaagccg ttagcaagac atgataggga gttgacaagt taaagaagtt ctggtttata
+      181 atagatacgt ttttaaagtt aggatgtatg ggataattgt agtacacctt aattggttta
+      241 actttatttg gtttatagat attatgttcg gtattgcatg cctggtgttt ttaattaaga
+      301 cgctgacttc ctggctaaac ttcccaatga tatatcttcc aaatagattt cgcagaaaac
+      361 cgtctatatt catgtttgat tgacctttaa ccgctaatta cgaatcttcc aagaatattt
+      421 caagagtcca aggttcggtc tataattttc ctgttctgta attagatcac atgttttata
+      481 gttcatggag atatgactat accactattc atagagacaa ctaatggcat ctctctcgat
+      541 ttccagatgt tgagttacta agaggattct ctccacactt caattcgtac ttccactacc
+      601 aaaatataat ctcctgttct aatgttctag ggtttttcgc gttttttcag gagaaatccg
+      661 tatatcgatg tttttaaaat ctacgctatt ggattcaacg tccaggactt cctgacgttt
+      721 aataacgatt tctacttcca gcagccattt tggttcagct acaagttcac tgtcaactac
+      781 catgttacga cttcgcaccg actgttttct tttacctcac gagtcgatca ggaaggtttc
+      841 atccttaaat ctcgtaacca tgccaacaca taagaacttt ttagggaagt taaggtgctc
+      901 agggtcttac cgtcgggccg tatgattcca catattcatg gataattcta tttattagga
+      961 gtctcacact agcgacaatg gggaagtcgt tacaccgttc atgcaggacg gagattaccc
+     1021 gacaaggaat tttgctacct taggaccgtt tacgatacag ccgccgttta tcattgatgc
+     1081 cgggcagatg tcagtaactt gaactattca tcggaattat cagtgacttg tgttgtaacc
+     1141 ttacagacgc ttccagaata taacttctta taaatggtag cgccggtttc ccgggtatcc
+     1201 aatccagtgc tccattcaag gcatagagac tcagcctgtg ttcaactttg taggatatat
+     1261 aatatagctt ttggtatctc gtaatgtaga acaataatgg gttgaccgtc aaatcctttt
+     1321 cattaaaaga gtggactaat gcccagccaa caccatccaa tttgattggg aataatctgt
+     1381 gttacaatac tttttgatcc caggctggta aaaaatgtaa acttttagcc caaaagaata
+     1441 gaaacagatg ccaggccaaa aacccaaaaa tagagctatg acgctatcaa tttgacaagg
+     1501 cagataaatt ctttcataga acttaacgtt tcatcctcca tacataaata aaacggtaga
+     1561 tagggaacaa actgcctcaa gacgttctta acccagctca cgcatcgctt ctaacggtga
+     1621 actctcattc caatggaacc ttgttcaagt tcaaatagat tggtaaggta tagcgtttac
+     1681 tatcgaatga aacaatgtat tccaccgcta gtgtttgctt ctaacattcc acttgcttat
+     1741 aactgtatgg acgtaacctc caggcaaaga aaatgaccgg tcaaaacgga atcagttaac
+     1801 tatggatagc tgatactaac aatttatcat tactcaagtc agcatagtct atatgaaggt
+     1861 ttctatggaa acacacttcc cttctcgcca tttgatagcg gttaaccttt ctttttcctt
+     1921 acgtactcta gcttttaaca caatattatt gtctatacta gatactatag ttgaaacagg
+     1981 acatatacat atattcatta ttctgaatag aaaaagaact ctataaataa ccatacaatt
+     2041 tcaacaaaat gccagtataa tattgtaatt tgatcagtat gaggtaatac aatataagat
+     2101 ataccatata atgaatatga ccattcacta ttagtatcat acatttcaac tattcttata
+     2161 aaatatatta ataataataa taaaccaact ataacatgtg aaaaatgtaa acctgtaaca
+     2221 caataaaata atgtaccaga tatagcatca tttatacaat atcctaaatg taagtattca
+     2281 gttgtttgaa gtgatgcaaa acattctcca agtaagtata ttataaatac aatactagaa
+     2341 atttctaaac tcattccttt ttctattaga aattgtaaac atgctgtcat acatgatgca
+     2401 cttgctaaaa taaatgtaat agttagaatt aacattcttg atgatgttaa aataattcct
+     2461 tcattatata atggatatgg agataaacta aaatgtaaaa taccccaaaa atatgtaata
+     2521 aataatattg cttcagatat aattatagat aacattcctg atactaatga tgaaaatata
+     2581 gaataaaaac tttctctaat agaatataca aatattataa aaataatagg attgaatgta
+     2641 aataagatac ccacagaaaa atattttaaa gatgttccat ataatgatgt taatgaagga
+     2701 taagatacta aatgtgcttt aatattatta tagttactaa atataaaaaa tatatttata
+     2761 agaacggtga ttttgtgtgc cgttaacata taacggtaag aaggttcgcc ggggataaca
+     2821 ggttatagta tatatagagc tcaaatcttt atatactatt ggcacctcca tgtcgtctca
+     2881 tcgcagcctt gcaataaatt aatattattt agcgtgtatt gttgccttgt acacaccgct
+     2941 cgtcacgcaa atttatatta ctaagataaa gaactccagg cgttaacctg tagagttgag
+     3001 atggaaacag ccggaaagga aatattacgt ccaaatgata agaatatata tgaaatatac
+     3061 tagcatggga ctaaaaaatg ttatgttgtt ggtttaagcc cttttaccat acaagagatc
+     3121 gcgtactttg gactgaaaaa agctgtgagg aaactacatt aaaggaactc gactggccta
+     3181 caatataaga acgaacgctt ttaacgcctg acatggatgg ataatactcg acttttccaa
+     3241 agtataaccg ctgtcgctgg gactgtatgg atcgaatctt acttattcat atccaagcct
+     3301 cacttattgt taattatata ttatattttt tttgttttca atagatatac acttattaca
+     3361 aattgcaatc ataaaacttt aggtctatac tatttatggt tttcattttt atttggtagt
+     3421 tatggttttt tattatctgt tattttacgt acagaattat attcttcttc tttaagaata
+     3481 attgcacaag aaaatgttaa cttatataat atgatattta cattacatgg aattattatg
+     3541 atattcttta atataatgcc aggattattt ggaggattcg gtaattactt cctaccaatt
+     3601 ttatgtggtt ctccagaact tgcatatcca agaattaata gtatatcttt attattacaa
+     3661 ccaatagctt ttatattagt cattttatct acagcagcag aatttggagg aggtactgga
+     3721 tggactttat atccaccatt aagtacatca cttatgtctt tatctcctgt tgcagtagat
+     3781 gttatcattg ttggtctttt agtatctggt attgctagta ttatgtcttc tttaaatttt
+     3841 attactactg taatgcatct aagatctaaa ggtttaacac ttggtatatt aagtgtatct
+     3901 acatggtcat taataattac atctgtaatg ctattattaa cattacctgt tttaacaggt
+     3961 ggtgttttaa tgttattatc agatttacat tttaatacat tattttttga tcctacattt
+     4021 gctggagatc ctattttata tcaacatcta ttttggtttt ttggacatcc tgaagtgtat
+     4081 attttaatat taccagcatt tggtgttatt agtcatgtaa tatctacaaa ttattgtaga
+     4141 agtttatttg gtaatcaatc tatgatttta gcaatgagtt gtattgctat attaggaagt
+     4201 gttgtatggg ctcatcatat gtatactaca ggtttagaag tagatacaag agcatttttt
+     4261 acatctacaa ctatattaat atctatacct actggaacaa aaatatttaa ttggatatgt
+     4321 acatatatgg gtagtaattt tggtataact catagttcat ctttattatc attactattt
+     4381 atatgtacat ttacttttgg tggtactaca ggagtaatat taggtaatgc agctattgat
+     4441 attgcattac atgatactta ctatgtaatc gctcatttcc attttgtatt atctataggt
+     4501 gcaattattg gattgtttac attagtaagt agttttcaag aaaacttttt tggtaaacat
+     4561 ttacgtgaaa attctataat aatattatgg tcaatcttat tttttattgg agttgtatta
+     4621 acattcttac ctatgcattt tcttggattt aatgtaatgc ctagacgtat tcctgattat
+     4681 ccagacgctt taaatggatg gaatatgatt tgttcaattg gatcaacaat gactttattt
+     4741 ggtttattta tttttaaata atataaaata ttttttgttt atatgaatta ttattctatt
+     4801 aatttagcaa aagcacattt attaaattac ccatgcccat taaatattaa tttcttatgg
+     4861 aattatggat ttcttttagg tattatattc tttatacaaa tattaacagg tgtattttta
+     4921 gcaagtcgtt atactccaga aatatcttat gcatattata gtatacaaca tattttaaga
+     4981 gaattatgga gtggatggtg ttttagatat atgcatgcta caggtgcatc tcttgtattc
+     5041 ttattaactt atttacacat tttaagagga ttaaattatt catatttata tttaccatta
+     5101 tcatggatat caggattaat catatttgca ttatttatag ttacagcttt tataggttac
+     5161 gttttacctt ggggacaaat gagttattgg ggtgcaactg ttataactaa tttattatct
+     5221 tcaattccag tattagtaat ttggttatgt ggaggatata ctgtaagtga tcctacaatt
+     5281 aaaagatttt ttgtattaca ttttatactt ccttttgtag cattatgtat tgtatttata
+     5341 catatattct ttttacattt acatggtagc acaaatcctt tagggtatga tacagcttta
+     5401 aaaataccct tctatccaaa tctattaagt cttgatgtaa aaggatttaa taatatattt
+     5461 atattattct tattacaaag tatttttggt ataattccat tatctcatcc agataatgct
+     5521 atattagtta atacatatgt tacaccaatt caaattgttc ctgaatggta ctttttacca
+     5581 ttttatgcaa tgttaaaaac aatacctagt aaaacagcag gtttattaat tgttttagca
+     5641 tctttacaat tattattttt attagctgaa caaagaagtt taactactat aatacaattt
+     5701 aaaatgacat ttggtgctag agaatattca gtaccaatga tatggtttat gtgttcattc
+     5761 tatgctttat tatggattgg atgtcagtta ccacaagata tttttatttt atatggtcgt
+     5821 ttatttataa tatcattctt ctctagtgga ttatttgcac ttgttcatta taaaagaaca
+     5881 cattatgatt acagctccca agcaaacatt aaaattacaa ggctacgata agacgatatc
+     5941 tctgaatatt gagcagaaca atacagaccg taaggttata attatgttaa
+//
+
+LOCUS       CM190334                5974 bp    DNA     circular CON 18-AUG-2026
+DEFINITION  Plasmodium ovale curtisi isolate 4 mitochondrion, complete
+            sequence, whole genome shotgun sequence.
+ACCESSION   CM190334 JBXUZE010000000
+VERSION     CM190334.1
+DBLINK      BioProject: PRJNA1015456
+            BioSample: SAMN37357391
+KEYWORDS    WGS.
+SOURCE      mitochondrion Plasmodium ovale curtisi
+  ORGANISM  Plasmodium ovale curtisi
+            Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium.
+REFERENCE   1  (bases 1 to 5974)
+  AUTHORS   Higgins,M., Manko,E., Ward,D., Phelan,J.E., Nolder,D.,
+            Sutherland,C.J., Clark,T.G. and Campino,S.
+  TITLE     New reference genomes to distinguish the sympatric malaria
+            parasites, Plasmodium ovale curtisi and Plasmodium ovale wallikeri
+  JOURNAL   Sci Rep 14 (1), 3843 (2024)
+   PUBMED   38360879
+REFERENCE   2  (bases 1 to 5974)
+  AUTHORS   Higgins,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (29-APR-2026) DIB, LSHTM, Keppel Street, London WC1E 7HT,
+            United Kingdom
+COMMENT     ##Genome-Assembly-Data-START##
+            Assembly Date          :: AUG-2023
+            Assembly Method        :: SPAdes v. AUG-2023
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 38.0x
+            Sequencing Technology  :: Illumina NovaSeq; Oxford Nanopore
+            ##Genome-Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..5974
+                     /organism="Plasmodium ovale curtisi"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /isolate="4"
+                     /isolation_source="blood"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:864141"
+                     /geo_loc_name="Sudan"
+                     /lat_lon="12.8628 N 30.2176 E"
+                     /collection_date="2020"
+                     /collected_by="LSHTM"
+CONTIG      join(JBXUZE010000016.1:1..5974)
+//
+
+LOCUS       CM190336                5975 bp    DNA     circular CON 18-AUG-2026
+DEFINITION  Plasmodium ovale wallikeri isolate 15 mitochondrion, complete
+            sequence, whole genome shotgun sequence.
+ACCESSION   CM190336 JBXUZF010000000
+VERSION     CM190336.1
+DBLINK      BioProject: PRJNA1015456
+            BioSample: SAMN37357402
+KEYWORDS    WGS.
+SOURCE      mitochondrion Plasmodium ovale wallikeri
+  ORGANISM  Plasmodium ovale wallikeri
+            Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium.
+REFERENCE   1  (bases 1 to 5975)
+  AUTHORS   Higgins,M., Manko,E., Ward,D., Phelan,J.E., Nolder,D.,
+            Sutherland,C.J., Clark,T.G. and Campino,S.
+  TITLE     New reference genomes to distinguish the sympatric malaria
+            parasites, Plasmodium ovale curtisi and Plasmodium ovale wallikeri
+  JOURNAL   Sci Rep 14 (1), 3843 (2024)
+   PUBMED   38360879
+REFERENCE   2  (bases 1 to 5975)
+  AUTHORS   Higgins,M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (29-APR-2026) DIB, LSHTM, Keppel Street, London WC1E 7HT,
+            United Kingdom
+COMMENT     ##Genome-Assembly-Data-START##
+            Assembly Date          :: AUG-2023
+            Assembly Method        :: SPAdes v. AUG-2023
+            Genome Representation  :: Full
+            Expected Final Version :: Yes
+            Genome Coverage        :: 41.0x
+            Sequencing Technology  :: Illumina NovaSeq; Oxford Nanopore
+            ##Genome-Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..5975
+                     /organism="Plasmodium ovale wallikeri"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /isolate="15"
+                     /isolation_source="blood"
+                     /host="Homo sapiens"
+                     /db_xref="taxon:864142"
+                     /geo_loc_name="Nigeria"
+                     /lat_lon="9.0820 N 8.6753 E"
+                     /collection_date="2020"
+                     /collected_by="LSHTM"
+CONTIG      join(JBXUZF010000016.1:1..5975)
+//
+
+LOCUS       LT594637                5969 bp    DNA     linear   INV 23-SEP-2016
+DEFINITION  Plasmodium malariae genome assembly, organelle: mitochondrion.
+ACCESSION   LT594637
+VERSION     LT594637.1
+DBLINK      BioProject: PRJEB14392
+            BioSample: SAMEA3923181
+KEYWORDS    .
+SOURCE      mitochondrion Plasmodium malariae
+  ORGANISM  Plasmodium malariae
+            Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium.
+REFERENCE   1
+  CONSRTM   Pathogen Informatics
+  TITLE     Direct Submission
+  JOURNAL   Submitted (15-JUN-2016) WTSI, Pathogen Informatics, Wellcome Trust
+            Sanger Institute, CB10 1SA, United Kingdom
+FEATURES             Location/Qualifiers
+     source          1..5969
+                     /organism="Plasmodium malariae"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /db_xref="taxon:5858"
+     gene            complement(14..73)
+                     /gene="PmUG01_MIT000100"
+                     /locus_tag="PMUG01_MIT000100.1"
+     rRNA            complement(14..73)
+                     /gene="PmUG01_MIT000100"
+                     /locus_tag="PMUG01_MIT000100.1"
+                     /product="rRNA"
+     gene            complement(74..104)
+                     /gene="PmUG01_MIT000200"
+                     /locus_tag="PMUG01_MIT000200.1"
+     rRNA            complement(74..104)
+                     /gene="PmUG01_MIT000200"
+                     /locus_tag="PMUG01_MIT000200.1"
+                     /product="rRNA"
+     gene            complement(105..200)
+                     /gene="PmUG01_MIT000300"
+                     /locus_tag="PMUG01_MIT000300.1"
+     rRNA            complement(105..200)
+                     /gene="PmUG01_MIT000300"
+                     /locus_tag="PMUG01_MIT000300.1"
+                     /product="rRNA"
+     gene            complement(380..769)
+                     /gene="COX3"
+                     /locus_tag="PMUG01_MIT000400"
+     CDS             complement(380..769)
+                     /gene="COX3"
+                     /locus_tag="PMUG01_MIT000400"
+                     /codon_start=1
+                     /product="cytochrome oxidase subunit 3, putative"
+                     /protein_id="SBT86811.1"
+                     /translation="MLSIIISEALFLLHIFGVYYILVYLHVLYMMKEFILTSSRMLIL
+                     TITFTLASASCMTACLQFLLEKGMSFEISSIIFIIYLLGECFASLQTTEYLHLEYYIN
+                     DGVFRNIIFMCLQVYIFHMLLLVYYYY"
+     gene            1004..1111
+                     /gene="PmUG01_MIT000500"
+                     /locus_tag="PMUG01_MIT000500.1"
+     rRNA            1004..1111
+                     /gene="PmUG01_MIT000500"
+                     /locus_tag="PMUG01_MIT000500.1"
+                     /product="rRNA"
+     gene            1133..1169
+                     /gene="PmUG01_MIT000600"
+                     /locus_tag="PMUG01_MIT000600.1"
+     rRNA            1133..1169
+                     /gene="PmUG01_MIT000600"
+                     /locus_tag="PMUG01_MIT000600.1"
+                     /product="rRNA"
+     gene            1182..1245
+                     /gene="PmUG01_MIT000700"
+                     /locus_tag="PMUG01_MIT000700.1"
+     rRNA            1182..1245
+                     /gene="PmUG01_MIT000700"
+                     /locus_tag="PMUG01_MIT000700.1"
+                     /product="rRNA"
+     gene            1277..1312
+                     /gene="PmUG01_MIT000800"
+                     /locus_tag="PMUG01_MIT000800.1"
+     rRNA            1277..1312
+                     /gene="PmUG01_MIT000800"
+                     /locus_tag="PMUG01_MIT000800.1"
+                     /product="rRNA"
+     gene            1313..1394
+                     /gene="PmUG01_MIT000900"
+                     /locus_tag="PMUG01_MIT000900.1"
+     rRNA            1313..1394
+                     /gene="PmUG01_MIT000900"
+                     /locus_tag="PMUG01_MIT000900.1"
+                     /product="rRNA"
+     gene            1711..2961
+                     /gene="COX1"
+                     /locus_tag="PMUG01_MIT001000"
+     CDS             1711..2961
+                     /gene="COX1"
+                     /locus_tag="PMUG01_MIT001000"
+                     /codon_start=1
+                     /product="cytochrome oxidase subunit 1, putative"
+                     /protein_id="SBT86812.1"
+                     /translation="MIFTIHGIIMIFFNIMPGLFGGFGNYFLPILCGSPELSYPRINS
+                     ISLLLQPIAFILIILSTAAEFGGGTGWTLYPPLSTSLMSLSPVAVDVIILGLLVSGIA
+                     SIMSSLNFITTIMHLRSKGLTLGILSVSTWSLLITSIMLLLTLPILTGGVLMLLSDLH
+                     FNTLFFDPTFAGDPILYQHLFWFFGHPEVYILILPAFGVISHVISTNYCRSLFGNQSM
+                     ILAMSCIAILGSVVWAHHMYTTGLEVDTRAFFTSTTILISIPTGTKVFNWICTYMGSN
+                     FGITHSSSLLALLFICTFTFGGTTGVILGNAAINIALHDTYYVIAHFHFVLSIGAIIG
+                     LFTTISHFQENFFGKCLRENSIIVLWSILFFIGVIFIFLPMHFLGFNVMPRRIPDYPD
+                     ALNGWNMICSIGSTMTLFGFLIFK"
+     gene            3202..4137
+                     /gene="CYTB"
+                     /locus_tag="PMUG01_MIT001100"
+     CDS             3202..4137
+                     /gene="CYTB"
+                     /locus_tag="PMUG01_MIT001100"
+                     /codon_start=1
+                     /product="cytochrome b, putative"
+                     /protein_id="SBT86813.1"
+                     /translation="MHATGASLVFFLTYLHILRGLNYSYLYLPLSWISGLIIFALFIV
+                     TAFIGYVLPWGQMSYWGATVITNLLSSIPALVIWLCGGYTVSDPTIKRFFVLHFILPF
+                     VALCIVFIHIFFLHLHGSTNPLGYDTALKIPFYPNLLSLDVKGFNNIIIIFLLQSLFG
+                     IIPLSHPDNAIIVNTYVTPIQIVPEWYFLPFYAMLKTIPSKTAGLLIVLASLQLLFLM
+                     AEQRNLTTIIQFKMLFGAREYSVPIIWFMCSFYALLWIGCQLPQEIFILYGRLFIISF
+                     FSSGLFALVHYKRTYYDYSSQANIKNYKATIRRYF"
+     gene            4107..4180
+                     /gene="PmUG01_MIT001200"
+                     /locus_tag="PMUG01_MIT001200.1"
+     rRNA            4107..4180
+                     /gene="PmUG01_MIT001200"
+                     /locus_tag="PMUG01_MIT001200.1"
+                     /product="rRNA"
+ORIGIN      
+        1 cggaatcaat taactataga tagctgatac taacaattta tcattactca agtcagcata
+       61 gtatatatga aggtttctat ggaaacacac ttcccttctc gccatttgat agcggttaac
+      121 ctttcctttt ccttacgtac tctagctttg tacacaaatt aattcgtcta cattagatac
+      181 tatatttgaa acaggacata tatgttcaat tattctgaat agaataggaa ctctataaat
+      241 aaccatacta tttctataaa atgccaatat aatattgtta tttgatcagt atgaggtaaa
+      301 ataacatatg atataccata taatgaatat gaccattcac tatttatgtc ataaatatct
+      361 atcattctta taaagtatat taataataat aataaaccaa taataacatg tgaaaaatgt
+      421 aaacctgtaa acacataaaa ataatgttcc tgaaaactcc atcattaata taatattcta
+      481 aatgtaaata ttcagttgtc tgtaatgatg caaaacattc tccaagtaaa tatattataa
+      541 atataatact tgatatttca aaactcatac ctttttctaa aagaaattgt aaacatgcag
+      601 tcatacatga tgcacttgct aaagtaaatg taatagttaa aattaacatt cttgatgaag
+      661 ttaatataaa ttccttcatc atataaagga catggagata aactaaaatg taatataccc
+      721 caaaaatatg taataaaaat aatgcttcag atataataat tgataacata ccagatacta
+      781 atgaagaaaa tgtggaataa aaactttctc taatagaata tacaaaaatt aataaaatta
+      841 ttggattaaa ggtaaataaa ataccaacag aaaagtattt taaagatgtt ccatataatg
+      901 atgttaatga aggataagat attaaatgtg cttttatatt attgtaatta ttaaatacaa
+      961 aaaatatatt tataagaacg gttatttttg tgtaccgtta acatataacg gtaagaaggt
+     1021 tcgccgggga taacaggtta tagtatatat agagctcaaa tctttatata ctattggcac
+     1081 ctccatgtcg tctcatcgca gccttgtaat aaatattatt tagcgtgtat tgttgccttg
+     1141 tacacaccgc tcgtcacgca aaatttatat attaaagata aagaactcca ggcgttaacc
+     1201 tgtagagttg agatggaaac agccggaaag gtaatattac gtccaaatga taaaatatat
+     1261 atgaaatata ctagcatggg actaaaaaat gttatgttgt tggtttaagc cctttttacc
+     1321 atacaagaga tcgcgtactt tggattgaaa aaagctgtga ggaaactaca ttaaaggaac
+     1381 tcgactggcc tacacaataa gaacgaacgc ttttaacgcc tgacatggat ggataatact
+     1441 cgacttttcc aaagtttaac cgctgtcgct gggactgtat ggatcgaatc ttacttattc
+     1501 atatccaagc ctcatttgta atttattttt tttgttttaa atagatatac actcattaca
+     1561 aattgtaatc ataaaacttt aggattatac tatttatggt tttcattttt atttggtagt
+     1621 tatggttttt tattatctat tattttacgt actgaattat actcttcttc tttaagaatt
+     1681 atagcacaag aaaatgttaa tttatataat atgatattta cgatacatgg tataattatg
+     1741 atatttttca atataatgcc aggattattt ggaggatttg gaaattattt tttacctatt
+     1801 ttatgtggat ctccagaact ttcatatcca agaattaata gtatatcttt attattacaa
+     1861 ccaattgctt ttatattaat tattttatct acagctgctg aatttggagg aggaacagga
+     1921 tggactttat atccaccatt aagtacttct cttatgtctt tatctcctgt tgctgtagat
+     1981 gtaattattc ttggtctttt agtatcagga attgctagta ttatgtcttc tttaaatttc
+     2041 attactacta taatgcattt aagatcaaaa ggattaacat taggtatatt aagtgtatca
+     2101 acatggtcat tattaattac atctataatg ttattattaa cattaccaat tttaacaggt
+     2161 ggtgttttaa tgttattatc tgatctacat tttaatacat tattttttga tcctacattt
+     2221 gctggtgatc ctattttata tcaacattta ttttggtttt ttggacatcc agaagtgtat
+     2281 attttaatat taccagcttt tggtgttatt agtcatgtca tatctacaaa ttattgtaga
+     2341 agtttatttg gtaatcaatc tatgatttta gctatgagtt gtatagctat attaggaagt
+     2401 gtagtttggg ctcatcatat gtatactact ggtttagaag tagatacaag agcttttttt
+     2461 acatctacaa caatactaat atctattcct actggaacaa aagtttttaa ttggatatgt
+     2521 acatatatgg gaagtaattt tggtataact catagttcat ctttattagc attactattt
+     2581 atatgtacat ttacttttgg tggaactaca ggagtaatat taggaaatgc tgctattaat
+     2641 atagcattac atgatacata ttatgtaatt gctcactttc attttgtatt atctataggt
+     2701 gcaataattg gattatttac tacaataagt cattttcaag aaaacttttt tggtaaatgt
+     2761 ttacgtgaaa attcaattat tgtattatgg tcaattttat tttttatagg agtaatattt
+     2821 atatttttac ctatgcattt tcttggattt aatgtaatgc ctagacgtat tcctgattat
+     2881 ccagacgctt taaatggatg gaatatgatt tgttcaattg gatcaacaat gactttattc
+     2941 ggttttttaa tttttaaata aaatttattg tttatatgaa ttattattcc ataaatttag
+     3001 caaaagcaca tttattaaat tacccatgtc cattaaatat taatttttta tggaattatg
+     3061 gattcctttt aggaattata ttttttatac aaattaacag gtgtattttt agctagtcgt
+     3121 tatactccag atatatcata tgcatattat agtattcaac acattttaag agaattatgg
+     3181 agtggatggt gttttagata tatgcatgca acaggtgcat cacttgtatt ttttctaact
+     3241 tatttacata ttttaagagg attaaattat tcttatttat atttaccatt atcatggata
+     3301 tcaggattaa ttatatttgc attatttata gttacagctt ttataggtta tgttttacca
+     3361 tggggacaaa tgagttattg gggtgcaaca gttattacta atttattatc ttcaattcca
+     3421 gcacttgtta tttggttatg tggaggatat actgtaagtg atccaactat aaaaagattt
+     3481 tttgtattac attttatact tccatttgtt gcattatgta ttgtatttat acatatattc
+     3541 tttttacatt tacatggtag cactaatcct ttagggtacg atacagcttt aaaaataccc
+     3601 ttttatccaa atctattaag tcttgatgta aaaggattta ataatattat tattatattt
+     3661 ttactacaaa gtttatttgg tattatacca ttatctcatc cagataatgc aattattgtt
+     3721 aatacatatg ttacaccaat acaaattgtt ccagaatggt attttttacc attttatgca
+     3781 atgttaaaaa caatacctag taaaacagca ggtttattaa ttgttttagc atcattacaa
+     3841 ttattatttt taatggctga acaaagaaat ttaactacta ttatacaatt taaaatgtta
+     3901 tttggtgcaa gagaatattc tgttccaatt atatggttta tgtgttcatt ctatgcttta
+     3961 ttatggattg gatgtcaatt accacaagaa attttcattt tatatggtcg tctatttatt
+     4021 atatcattct tttctagtgg tttatttgca cttgttcatt ataaaagaac atattatgat
+     4081 tacagctccc aagcaaacat taaaaattac aaggctacga taagacgata tttctgaata
+     4141 ctgtgcagaa caatacagac cgtaaggtta taattatgtt taaagtaagg ataatataaa
+     4201 tatagttacc atagctgttg atggatgctt cgatatataa tatattttag tatttatcga
+     4261 gttaacatgc tcagccgcca aaaatataac gatattatta ccgtacaagc cgttagcaag
+     4321 acatgatagg gagttgacaa gttaaagaag ttctggttta atatagatac gtttttaaag
+     4381 ttaggatgta tgggataatt gtagtacacc ttaattggtt taacaattta tggtacatag
+     4441 tataaatgtt cggtattgca tgcctggtgt ttttaattaa gacgctgact tcctggctaa
+     4501 acttcccaat gatatatctt ccaaatagat ttcgcagaaa accgtctata ttcatgtttg
+     4561 attgaccttt aaccactaat tacgaatctt ccaagaatat ttcaagagtc caaggttcgg
+     4621 tctattattt tcctgttctg taattagatc acatgtttta tagttcatgg agatatgact
+     4681 atatatacca ctattcatag agacaactta tggcatctct ctcgatttcc agatgttgag
+     4741 ttactaagag gattctctcc acacttcaat tcgtacttcc actaccaaaa tataatctcc
+     4801 tgttccaata ttctaggatt tttcgtattt tttcaggaga aatccgtata tcgatgtctt
+     4861 tataatctac gctattggat tcaacgtcca ggacttcctg acgcttaata acgatttcta
+     4921 cttccagcag ccattttggt tcagctacaa gttcactgtc aactaccatg ttacgacttc
+     4981 gcaccgactg tttcttttac ctcacgagtc gatcaggaag gtttaatcct taaatctcgt
+     5041 aaccatgcca acacataaga acttttaggg aagttaaggt gctcagggtc ttaccgtcgg
+     5101 gccgtattat tccacatatt catggataat tctatttatt aggagtctca cactagcgac
+     5161 aatggggaag tcgttacacc gttcatgcag gacggagatt acccgacaag gaattttgct
+     5221 accttaggac cgtttacgat acagccgccg tttatcattg atgccgggca gatgtcagta
+     5281 acttgaatta ttcatcggaa ttatcagtga cttgtgttgt aaccttacag acgcttccag
+     5341 atattaactt cttataaatg gtagcgccgg tttcccgggt atccaatcca gtgctccatt
+     5401 caaggcatag agactcagcc tatgttcaac tttgtaggaa ttattatagc ttttggtatc
+     5461 tcgtaatgta gaacaataat gggttgaccg tcaaatcctt ttcattaaaa gagtggaaaa
+     5521 taatgcccag ccaacaccat ccaatttgat tgggaattat ctgtgttaca atatttttga
+     5581 tcccaggctg gtattaaatg taaactttta gcccaaaaga atagaaacag atgccaggcc
+     5641 aaaaacctaa aatagagcta tgacgctatc aattttgaca aggcagataa attctttcat
+     5701 agaacttaac gtatcatcat ccatacataa ataaaacggt agatagggaa caaactgcct
+     5761 caagacgttc ttaacccagc tcacgcatcg cttctaacgg tgaactctca ttccaatgga
+     5821 accttgttca agttcaaatt gattggtaag gtataacgtt tactatcgaa tgaaataatg
+     5881 tgttccaccg ctagtgtttg cttctaacat tccacttgct tataactgta tggacgaaac
+     5941 ctccaggcaa agaaaatgac cggtcaaaa
+//
+
+LOCUS       NC_007232               5957 bp    DNA     circular INV 03-APR-2023
+DEFINITION  Plasmodium knowlesi mitochondrion, complete genome.
+ACCESSION   NC_007232
+VERSION     NC_007232.1
+DBLINK      BioProject: PRJNA927338
+KEYWORDS    RefSeq.
+SOURCE      mitochondrion Plasmodium knowlesi
+  ORGANISM  Plasmodium knowlesi
+            Eukaryota; Sar; Alveolata; Apicomplexa; Aconoidasida; Haemosporida;
+            Plasmodiidae; Plasmodium; Plasmodium.
+REFERENCE   1  (bases 1 to 5957)
+  AUTHORS   Jongwutiwes,S., Putaporntip,C., Iwasaki,T., Ferreira,M.U.,
+            Kanbara,H. and Hughes,A.L.
+  TITLE     Mitochondrial genome sequences support ancient population expansion
+            in Plasmodium vivax
+  JOURNAL   Mol. Biol. Evol. 22 (8), 1733-1739 (2005)
+   PUBMED   15901839
+REFERENCE   2  (bases 1 to 5957)
+  CONSRTM   NCBI Genome Project
+  TITLE     Direct Submission
+  JOURNAL   Submitted (02-AUG-2005) National Center for Biotechnology
+            Information, NIH, Bethesda, MD 20894, USA
+REFERENCE   3  (bases 1 to 5957)
+  AUTHORS   Jongwutiwes,S. and Putaporntip,C.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (13-AUG-2004) Parasitology, Faculty of Medicine,
+            Chulalongkorn University, Rama4, Pathumwan, Bangkok 10330, Thailand
+COMMENT     PROVISIONAL REFSEQ: This record has not yet been subject to final
+            NCBI review. The reference sequence was derived from AY722797.
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..5957
+                     /organism="Plasmodium knowlesi"
+                     /organelle="mitochondrion"
+                     /mol_type="genomic DNA"
+                     /isolate="Malayan MRA-487"
+                     /db_xref="taxon:5850"
+     gene            complement(1987..>2736)
+                     /gene="cox3"
+                     /locus_tag="PlknoMp1"
+                     /db_xref="GeneID:3562401"
+     CDS             complement(1987..>2736)
+                     /gene="cox3"
+                     /locus_tag="PlknoMp1"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome oxidase subunit 3"
+                     /protein_id="YP_272028.1"
+                     /db_xref="GeneID:3562401"
+                     /translation="FIFSNYNNIKAHLVSYPSLTSLYGTSLKYFSVGILFTFNPIIFI
+                     IFVYSIRESFYSVFSSLVSGMLSIIISEALLFITYFWGILHFSLSPYPLYSEGIIFTS
+                     SRMLILTITFILASASCMTACLQFLIEKGMSLEISSIIFIIYLLGECFASLQTTEYLH
+                     LGYCINDAISGTLFYCVTGLHFSHVIVGLLLLLIYFIRIIEVYDTNCEWSYSLYGISY
+                     ILLPHTDQITILYWHFVEIVWLFIEFFFYSE"
+     gene            <3298..4731
+                     /gene="cox1"
+                     /locus_tag="PlknoMp2"
+                     /db_xref="GeneID:3562402"
+     CDS             <3298..4731
+                     /gene="cox1"
+                     /locus_tag="PlknoMp2"
+                     /note="start codon not determined"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome oxidase subunit 1"
+                     /protein_id="YP_272029.1"
+                     /db_xref="GeneID:3562402"
+                     /translation="LFFFNRYTLITNCNHKTLGLYYLWFSFLFGSYGFLLSVILRTEL
+                     YSSSLRIIAQENVNLYNMIFTLHGIIMIFFNIMPGLFGGFGNYFLPILCGSPELAYPR
+                     INSISLLLQPIAFILVILSTAAEFGGGTGWTLYPPLSTSLMSLSPVAVDVIIIGLLVS
+                     GIASIMSSLNFITTVMHLRSKGLTLGILSVSTWSLIITSVMLLLTLPVLTGGVLMLLS
+                     DLHFNTLFFDPTFAGDPILYQHLFWFFGHPEVYILILPAFGVISHVISTNYCRSLFGN
+                     QSMILAMSCIAILGSVVWAHHMYTTGLEVDTRAFFTSTTILISIPTGTKIFNWICTYM
+                     GSNFGITHSSSLLSLLFICTFTFGGTTGVILGNAAIDIALHDTYYVIAHFHFVLSIGA
+                     IIGLFTLVSSFQENFFGKHLRENSIIILWSILFFIGVVLTFLPMHFLGFNVMPRRIPD
+                     YPDALNGWNMICSIGSTMTLFGFLIFK"
+     gene            4750..5880
+                     /gene="cytb"
+                     /locus_tag="PlknoMp3"
+                     /db_xref="GeneID:3562403"
+     CDS             4750..5880
+                     /gene="cytb"
+                     /locus_tag="PlknoMp3"
+                     /codon_start=1
+                     /transl_table=4
+                     /product="cytochrome B"
+                     /protein_id="YP_272030.1"
+                     /db_xref="GeneID:3562403"
+                     /translation="MNYYSINLAKAHLLNYPCPLNINFLWNYGFLLGIIFFIQILTGV
+                     FLASRYTPEISYAYYSIQHILRELWSGWCFRYMHATGASLVFLLTYLHILRGLNYSYL
+                     YLPLSWISGLIIFALFIVTAFIGYVLPWGQMSYWGATVITNLLSSIPVLVIWLCGGYT
+                     VSDPTIKRFFVLHFILPFVALCIVFIHIFFLHLHGSTNPLGYDTALKIPFYPNLLSLD
+                     VKGFNNIFILFLLQSIFGIIPLSHPDNAILVNTYVTPIQIVPEWYFLPFYAMLKTIPS
+                     KTAGLLIVLASLQLLFLLAEQRSLTTIIQFKMTFGAREYSVPMIWFMCSFYALLWIGC
+                     QLPQDIFILYGRLFIILFFFSGLFTLVHYKRTHYDYSSQANI"
+ORIGIN      
+        1 aagttaggat aataaaataa tagttaccat agctgtagat ggatgcttcg atatatatta
+       61 tatttaagta ttaatcgaga ttacatgctc agccgccaaa aataaaacga tattattacc
+      121 gtacaagccg ttagcaagac atgataggga gttgacaagt taaagaagtt ctggtttata
+      181 atagatacgt tataaaagtt aggatgtatg ggataattgt agtacacctt aattggttta
+      241 acaatatttg gtttatagat attatgttcg gtattgcatg cctggtgttt ttaaattaag
+      301 acgctgactt cctggctaaa cttcccaatg atatatcttc caaatagatt tcgtagaaaa
+      361 ccgtctatat tcatgtttga ttgaccttta accgctaatt acgaatcttc caagaatatt
+      421 tcaagagtcc aaggttcggt ctattatttt cctgttctgt aattagatca catgttttat
+      481 agttcatgga gatatgacta taccactatt catagagaca acttatggca tctctctcga
+      541 tttccagttg ttgagttact aagaggattc tctccacact tcaattcgta cttccactac
+      601 cagaatataa tcacctgtta taatgttcta ggttttttcg cgttttttca ggagaaatcc
+      661 gtatatcgat gtttttaaaa tctacgctat tggattcaac gtccaggact tcctgacgtt
+      721 taataacgat ttctacttcc agcagccatt ttggttcagc tacaagttca ctgtcaacta
+      781 ccatgttacg acttcgcacc gactgttttc ttttacctta cgagtcgatc aggaaggttt
+      841 catccttaaa tctcgtaacc atgccaacac ataagaactt tttagggaag ttaaggtgct
+      901 cagggtctta ccgtcgggcc gtatgattcc acatattcat ggataattct atttattagg
+      961 agtctcacac tagcgacaat ggggaagtcg ttacaccgtt catgcaggac ggagattacc
+     1021 cgacaaggaa ttttgctacc ttaggaccgt ttacgataca gccgccgttt atcattgatg
+     1081 ccgggcagat gtcagtaact tgaattattc atcagaatta tcagtgactt gtgttgtaac
+     1141 cttacagacg cttccagaat ataacttctt ataaatggta gcgccggttt cccgggtatc
+     1201 caatccagtg ctccattcaa ggcatagaga ctcagcctgt gttcaacttt gtaggattta
+     1261 tagcttttgg tatctcgtaa tgtagaacaa taatgggttg accgtcaaat ccttttcatt
+     1321 aaaagagtgg attaatgccc agccaacacc atccaatttg attgggaata atctgtgtta
+     1381 caatactttt tgatcccagg ctggtaaaaa atgtaaactt ttagcccgaa agaatagaaa
+     1441 cagatgccag gccaaaaacc caaaaataga gctatgacgc tatcatttta acaagttaga
+     1501 taaattcttt catagaactt aacgtttcat cttccataca taaataaaac ggtagatagg
+     1561 gaacaaactg cctcaagacg ttcttaaccc agctcacgca tcgcttctaa cggtgaactc
+     1621 tcattccaat ggaaccttgt tcaagttcaa atagattggt aaggtatagc gtttactatc
+     1681 gaatgaaaca atgtattcca ccgctagtgt ttgcttctaa cattccactt gcttataact
+     1741 gtatggacgt aacctccagg caaagaaaat gaccggtcaa aacggaatca attaactatg
+     1801 gatagctgat actaacaatt tatcattact caagtcagca tagtctatat gaaggtttct
+     1861 atggaaacac acttcccttc tcgccatttg atagcggtta acctttcttt tccttacgta
+     1921 ctctagcttt ttacacaact taattgtcta tactagatac tatggacgaa acaggacata
+     1981 tattcattat tctgaataga aaaagaactc tataaataac catacaattt caacaaaatg
+     2041 ccagtataat attgtaattt gatcagtatg aggtaataat atataagata taccatataa
+     2101 tgaatatgac cattcacaat tagtatcgta aacttctatt attcttataa aatatattaa
+     2161 taataataat aaaccaacta taacatgtga aaaatgtaaa cctgtaacac aataaaataa
+     2221 tgtacctgat atagcatcat ttatacaata tcctaaatgt aagtattcag ttgtttgaag
+     2281 tgatgcaaaa cattctccaa gtaagtatat tataaatata atactagaaa tttctaaact
+     2341 cattcctttt tctattagaa attgtaaaca tgctgtcata catgatgcac ttgctaaaat
+     2401 aaatgtaata gttaaaatta acattcttga tgatgtgaaa atgattcctt cactatataa
+     2461 tggatatgga gataaactaa aatgtaaaat accccagaag tatgtaataa ataataatgc
+     2521 ttcagatata attatagata acattcctga tactaatgat gaaaatacag aataaaaact
+     2581 ttctctaata gaatatacaa atattataaa aataatagga ttgaatgtaa ataaaatacc
+     2641 aacagaaaaa tattttaaag atgttccata taaagatgtt aatgaaggat aagatactaa
+     2701 atgtgctttt atattattat agttactaaa tataaaaaat atatttataa gaacggtaat
+     2761 tttgtgtgcc gttaacatat aacggtaaga aggttcgccg gggataacag gttatagtat
+     2821 atatagagct caaatcttta tatactattg gcacctccat gtcgtctcat cgcagccttg
+     2881 caataaataa atattattta gcgtgtattg ttgccttgta cacaccgctc gtcacgcaaa
+     2941 tttatatcac taagataaag aactccaggc gttaacctgt agagttgaga tggaaacagc
+     3001 cggaaaggta tcattacgtc caaactataa gaatatatga aatatactag catgggacaa
+     3061 aaaaatatta tgttgttggt ttaagccctt ttaccataca agagatcgcg tactttggac
+     3121 tgaaaaaagc tgtgaggaaa ctacattaaa ggaactcgac tggcctacaa tataagaacg
+     3181 aacgctttta acgcctgaca tggatggata atactcgact tttccaaagt ataaccgctg
+     3241 tcgctgggac tgtatggatc gaatcttact tattcatatc caagcctcat ttatgattta
+     3301 ttttttttta atagatatac acttattaca aattgcaatc ataaaacttt aggtttatac
+     3361 tatttatggt tttcattttt atttggtagt tatggatttt tattatctgt tattttacgt
+     3421 acagaattat attcttcttc tttaagaata attgcacaag aaaatgttaa tttatacaat
+     3481 atgatattta cattacatgg aataattatg atatttttta atataatgcc aggattattt
+     3541 ggaggattcg gtaattattt tctaccaatt ttatgcggtt ctccagaact tgcatatcca
+     3601 agaattaata gtatatcttt attattacaa ccaatagctt ttatattagt cattttatct
+     3661 acagcagcag aatttggagg aggtactgga tggactttat atccaccatt gagtacatca
+     3721 cttatgtctt tatctcctgt tgcagtagat gtaatcatta ttggtctttt agtgtctggt
+     3781 attgctagta ttatgtcttc tttaaatttt attactactg taatgcattt aagatctaaa
+     3841 ggtttaacac ttggtatact aagtgtatct acatggtcat taataattac atctgtaatg
+     3901 ttattattga cattacctgt attaacaggt ggtgttttaa tgttattatc agatttacat
+     3961 tttaatacat tattttttga tcctacattt gctggagatc ctattctata tcaacatcta
+     4021 ttctggttct ttggacatcc tgaagtatat attttaatat taccagcatt tggagttatt
+     4081 agtcatgtaa tatctacaaa ttattgtaga agcttattcg gtaatcaatc tatgatttta
+     4141 gcaatgagtt gtattgctat attaggaagt gttgtatggg ctcatcatat gtatactaca
+     4201 ggtttagaag tagatacaag agcatttttt acatctacaa ctatattaat atctatacct
+     4261 actggaacaa aaatatttaa ttggatatgt acatacatgg gtagtaattt tggtataact
+     4321 catagttcat ctttattatc attactattt atatgtacat ttacttttgg tggtactaca
+     4381 ggagtaatat taggaaatgc agctattgat attgcattac atgatactta ttatgtaatt
+     4441 gctcattttc actttgtatt atctataggt gcaataattg gattgtttac attagtaagt
+     4501 agttttcaag aaaacttttt tggtaaacat ttacgtgaaa attctataat tatactatgg
+     4561 tcaatcttat tttttattgg agttgtttta acattcttac ctatgcattt tcttggattt
+     4621 aatgtaatgc ctagacgtat tcctgattat ccagacgctt taaatggatg gaatatgatt
+     4681 tgttcaattg gatcaactat gactttattt gggtttttaa tttttaaata atataaattt
+     4741 tttgtttata tgaattatta ttctattaat ttagctaaag cacatttatt aaattaccca
+     4801 tgcccattaa atattaattt cttatggaat tatggatttc ttttaggtat tatattcttt
+     4861 atacaaatat taacaggtgt atttttagct agtcgttata ctccagaaat ttcttacgca
+     4921 tactacagta tacaacatat tttaagagaa ttatggagtg gatggtgttt tagatatatg
+     4981 catgctacag gtgcatctct tgtattttta ttaacttatt tacatatttt aagaggatta
+     5041 aattactcat atttatatct accattatca tggatatcag gattaatcat atttgcatta
+     5101 tttatagtta cagcttttat aggttatgtt ttaccttggg gacaaatgag ttattggggt
+     5161 gcaactgtca taactaattt attatcttca attccagtat tagtcatttg gttatgtgga
+     5221 ggatatacag taagtgatcc aacaattaaa agattttttg tattacattt tatacttcct
+     5281 tttgtagcat tatgtattgt atttatacat atattctttt tacatttaca tggtagcact
+     5341 aatcctttag ggtatgatac agctttaaaa atacccttct atccaaatct attaagtctt
+     5401 gatgtaaaag gatttaataa tatatttata ttattcttat tacaaagtat ttttggtata
+     5461 attccattat ctcatccaga taatgctata ttagttaata catatgttac accaattcaa
+     5521 attgttcctg aatggtactt tttaccattt tatgcaatgt taaaaacaat acctagtaaa
+     5581 acagcaggtt tattaattgt tttagcatct ttacaattat tatttttatt agctgaacaa
+     5641 agaagtttaa ctactataat acaatttaaa atgacatttg gtgctagaga atattcagta
+     5701 ccaatgatat ggtttatgtg ttcattctat gctttattat ggattggatg tcaattacca
+     5761 caagatattt tcattttata tggtcgttta tttataatat tattcttctt tagtggatta
+     5821 tttacacttg ttcattataa aagaacacat tatgattaca gctcccaagc aaacatttaa
+     5881 attacaagtc tacgataaga caatatctct gtacactgat tagaacaata cagaccgtaa
+     5941 ggttataatt atgttaa
+//
+

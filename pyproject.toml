@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "malatools"
+version = "1.0.0"
+description = "MalaForge (pan-Plasmodium panel design) + MalaCall (analysis & reporting) command-line tools"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Bright Adu" }]
+license = { text = "MIT" }
+keywords = ["malaria", "plasmodium", "amplicon-sequencing", "drug-resistance", "genomic-surveillance", "nanopore"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = ["pysam", "numpy", "pandas"]
+
+[project.urls]
+Homepage = "https://github.com/aduton1000/malatools"
+Repository = "https://github.com/aduton1000/malatools"
+
+[project.scripts]
+malaforge = "malatools.malaforge:main"
+malacall = "malatools.malacall:main"
+
+[tool.setuptools]
+packages = ["malatools"]

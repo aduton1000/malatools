@@ -1,0 +1,358 @@
+<title>MalaForge Cost Model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+ --paper:#F1ECE3; --surface:#FBF8F2; --surface2:#EBE3D5; --ink:#231D19; --muted:#6C625A; --faint:#9A9084;
+ --blood:#9E2B25; --teal:#0E6E66; --gold:#8F6B1C; --blue:#3B6EA5; --line:#DED4C5; --line2:#C9BDAC;
+ --good:#0E6E66; --edge:#8F6B1C; --over:#9E2B25;
+ --shadow:0 1px 2px rgba(35,29,25,.06),0 8px 24px rgba(35,29,25,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#17130F; --surface:#201B16; --surface2:#2B241D; --ink:#F0E8DD; --muted:#B0A596; --faint:#7C7264;
+ --blood:#E06A5E; --teal:#5FC3B4; --gold:#D6A94A; --blue:#7FA8D8; --line:#33291F; --line2:#463829;
+ --good:#5FC3B4; --edge:#D6A94A; --over:#E06A5E;
+ --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+ --paper:#17130F; --surface:#201B16; --surface2:#2B241D; --ink:#F0E8DD; --muted:#B0A596; --faint:#7C7264;
+ --blood:#E06A5E; --teal:#5FC3B4; --gold:#D6A94A; --blue:#7FA8D8; --line:#33291F; --line2:#463829;
+ --good:#5FC3B4; --edge:#D6A94A; --over:#E06A5E;
+ --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.5;
+ font-feature-settings:"tnum" 0}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 22px 60px}
+.ey{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.18em;color:var(--blood);text-transform:uppercase}
+h1{font:700 30px "Spectral",Georgia,serif;line-height:1.05;margin:4px 0 4px;text-wrap:balance}
+.sub{font-size:14.5px;color:var(--muted);max-width:62ch}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* headline result */
+.result{margin:22px 0;background:var(--surface);border:1px solid var(--line2);border-radius:14px;
+ padding:20px 22px;box-shadow:var(--shadow);display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.big{display:flex;flex-direction:column;gap:2px}
+.big .lab{font:600 10.5px "IBM Plex Mono",monospace;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.big .val{font:700 52px "Spectral",serif;line-height:.95;letter-spacing:-.01em}
+.big .val small{font-size:24px;color:var(--muted);font-weight:600}
+.badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;margin-top:6px;
+ font:600 11px "IBM Plex Mono",monospace;padding:3px 10px;border-radius:20px;letter-spacing:.03em}
+.badge.ok{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.badge.edge{background:color-mix(in srgb,var(--edge) 18%,transparent);color:var(--edge)}
+.badge.over{background:color-mix(in srgb,var(--over) 16%,transparent);color:var(--over)}
+.tat{display:inline-block;margin-top:8px;font:600 12px "IBM Plex Mono",monospace;color:var(--blue)}
+.tat small{color:var(--muted);font-weight:400}
+.gauge-wrap{min-width:0}
+.gauge{position:relative;height:16px;border-radius:9px;background:var(--surface2);overflow:hidden;border:1px solid var(--line)}
+.gauge .band{position:absolute;top:0;bottom:0;background:color-mix(in srgb,var(--good) 20%,transparent)}
+.gauge .fill{position:absolute;top:0;bottom:0;left:0;background:linear-gradient(90deg,var(--teal),var(--blue));border-radius:9px 0 0 9px}
+.gauge .mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.5}
+.ticks{display:flex;justify-content:space-between;margin-top:5px;font:500 10px "IBM Plex Mono",monospace;color:var(--faint)}
+.substats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.substat{background:var(--surface2);border-radius:8px;padding:8px 11px}
+.substat b{font:700 18px "Spectral",serif;display:block;line-height:1.1}
+.substat span{font:600 9px "IBM Plex Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+
+.grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:18px;margin-top:6px}
+.card{background:var(--surface);border:1px solid var(--line2);border-radius:12px;padding:16px 17px;box-shadow:var(--shadow)}
+.card h2{font:700 13px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blood);
+ margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.field{margin-bottom:15px}
+.field label{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;font-weight:600;margin-bottom:5px}
+.field label .cur{font:600 13px "IBM Plex Mono",monospace;color:var(--blue)}
+select,input[type=number]{width:100%;font:500 13.5px "IBM Plex Sans";color:var(--ink);background:var(--surface2);
+ border:1px solid var(--line2);border-radius:7px;padding:8px 10px;font-variant-numeric:tabular-nums}
+select:focus,input:focus{outline:2px solid var(--blue);outline-offset:1px}
+input[type=range]{width:100%;accent-color:var(--blood);height:22px;cursor:pointer}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hint{font-size:11px;color:var(--faint);margin-top:3px;line-height:1.35}
+
+/* itemized table */
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+.items td{padding:4px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+.items td:last-child{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+.items .grp td{color:var(--gold);font:600 9.5px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;
+ padding-top:11px;border:none}
+.items input{width:66px;padding:3px 6px;font-size:12px;text-align:right}
+.items .itname{color:var(--ink)}.items .itname small{color:var(--faint);font-size:10.5px}
+.sumrow td{font-weight:700;border-top:2px solid var(--line2);border-bottom:none;padding-top:8px}
+.sumrow.big-total td{font-size:15px;color:var(--blood)}
+.seqrow td{padding:6px 0;border-bottom:1px solid var(--line)}
+.seqrow td:last-child{text-align:right;font-family:"IBM Plex Mono",monospace}
+
+/* comparison */
+.compare{margin-top:18px}
+.compare table{font-size:12.5px}
+.compare th{text-align:left;font:600 10px "IBM Plex Mono",monospace;letter-spacing:.04em;text-transform:uppercase;
+ color:var(--muted);padding:6px 8px;border-bottom:2px solid var(--line2)}
+.compare td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.compare td.n{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.compare tr.active td{background:color-mix(in srgb,var(--blue) 9%,transparent)}
+.pill{display:inline-block;font:600 9.5px "IBM Plex Mono",monospace;padding:2px 8px;border-radius:11px;letter-spacing:.02em}
+.pill.ok{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.pill.edge{background:color-mix(in srgb,var(--edge) 18%,transparent);color:var(--edge)}
+.pill.over{background:color-mix(in srgb,var(--over) 16%,transparent);color:var(--over)}
+.plat{font-weight:600}.plat small{color:var(--faint);font-weight:400;font-size:11px}
+
+.btn{font:600 12px "IBM Plex Sans";background:var(--surface2);border:1px solid var(--line2);color:var(--ink);
+ border-radius:7px;padding:7px 13px;cursor:pointer}
+.btn:hover{border-color:var(--blue)}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+
+.notes{margin-top:26px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;line-height:1.6}
+.notes b{color:var(--ink)}
+h2.sec{font:700 13px "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--blood);margin:0 0 4px}
+.scroll{overflow-x:auto}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.result{grid-template-columns:1fr}.substats{grid-template-columns:1fr 1fr}
+ .big .val{font-size:44px}}
+</style>
+
+<div class="wrap">
+  <div class="ey">MalaForge · economics</div>
+  <h1>Sequencing cost model</h1>
+  <p class="sub">Reagent + consumable cost <b>and turnaround time</b> per sample for the complete <b>289-amplicon</b> panel,
+  batched, at list prices. Every input is editable — adjust the itemized bill of materials, platform, batch size, and read
+  depth to model your own setup.</p>
+
+  <div class="result">
+    <div class="big">
+      <span class="lab">Total / sample</span>
+      <span class="val"><small>$</small><span id="total" class="num">—</span></span>
+      <span id="badge" class="badge ok">within target</span>
+      <span id="tat" class="tat">⏱ —</span>
+    </div>
+    <div class="gauge-wrap">
+      <div class="gauge" title="$1–10/sample target band">
+        <div id="gband" class="band"></div>
+        <div id="gfill" class="fill"></div>
+        <div id="gm1" class="mark"></div>
+        <div id="gm10" class="mark"></div>
+      </div>
+      <div class="ticks"><span>$0</span><span>$1</span><span>$5</span><span>$10</span><span>$15+</span></div>
+      <div class="substats">
+        <div class="substat"><b class="num" id="ss-samples">—</b><span>samples / run</span></div>
+        <div class="substat"><b class="num" id="ss-depth">—</b><span>reads / sample</span></div>
+        <div class="substat"><b class="num" id="ss-seq">—</b><span>seq $ / sample</span></div>
+        <div class="substat"><b class="num" id="ss-prep">—</b><span>prep $ / sample</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Run configuration</h2>
+      <div class="field">
+        <label>Platform / flow cell</label>
+        <select id="platform"></select>
+        <div class="hint" id="plat-hint"></div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label>Flow-cell / kit $</label>
+          <input type="number" id="fc" min="0" step="10">
+        </div>
+        <div class="field">
+          <label>Reads / run (M)</label>
+          <input type="number" id="rpr" min="1" step="1">
+        </div>
+      </div>
+      <div class="field">
+        <label>Reads / sample <span class="cur num" id="rps-v"></span></label>
+        <input type="range" id="rps" min="20" max="200" step="5">
+        <div class="hint">~50k = genotyping (resistance + species ID) · ~100k = robust incl. diversity/COI · ~150k+ = diversity-heavy</div>
+      </div>
+      <div class="field">
+        <label>Batch size (samples/run) <span class="cur num" id="batch-v"></span></label>
+        <input type="range" id="batch" min="24" max="1536" step="24">
+        <div class="hint">Combinatorial CS1/CS2 barcoding allows up to 96×96 = 9,216 indices.</div>
+      </div>
+      <div class="toolbar">
+        <button class="btn" id="reset">Reset defaults</button>
+        <button class="btn" id="theme">◑ Theme</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Itemized cost / sample</h2>
+      <table class="items"><tbody id="items"></tbody></table>
+    </div>
+  </div>
+
+  <div class="card compare">
+    <h2 class="sec">All platforms at current depth &amp; batch</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>Platform</th><th style="text-align:right">Reads/run</th><th style="text-align:right">Capacity /run</th>
+        <th style="text-align:right">Seq $/samp</th><th style="text-align:right">Total $/samp</th><th style="text-align:right">TAT</th><th>Target</th></tr></thead>
+      <tbody id="cmp"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="notes">
+    <p><b>Basis.</b> Figures are <b>reagent + consumable</b> costs at manufacturer list prices, matching the original
+    US $1–10/sample target — they exclude labor, instrument capital/amortization, shipping, and overhead. Two structural
+    savings keep the floor low and are already built into the assay: <b>no extraction kit</b> (5-minute lysis, −$2–5) and
+    <b>no library-prep kit</b> (the two-step tailed-amplicon PCR replaces it, −$25–65).</p>
+    <p><b>How seq $/sample is computed.</b> capacity = min(9,216 barcodes, reads_per_run ÷ reads_per_sample);
+    runs = ⌈batch ÷ capacity⌉; seq $/sample = runs × flow-cell $ ÷ batch. Under-filling a run raises the per-sample cost
+    (you still pay for the whole flow cell); filling it drives it toward flow-cell $ ÷ capacity.</p>
+    <p><b>Platform notes.</b> ≤400 bp amplicons merge on Illumina 2×250 and run native on ONT/MGI; the median amplicon is
+    240 bp, so most also merge on cheaper 2×150. ONT throughput assumes R10.4.1. The 289-amplicon count is ~18% more reads
+    than the pre-re-tile design, but the re-tile <b>unlocked Illumina/MGI</b> (previously ONT-only), whose per-read cost is
+    far lower — net effect on cost is neutral-to-favourable. Prices vary by region, contract, and year; treat as order-of-magnitude.</p>
+    <p><b>Turnaround (TAT).</b> Sample-to-answer = <b>prep (~5 h, constant)</b> + <b>sequencing</b> + <b>analysis</b>.
+    Prep is one working session (5-min lysis → round-1 multiplex PCR → clean-up → round-2 barcoding PCR → pool/QC).
+    <b>ONT streams data in real time</b>, so a MinION/Flongle gives a same-day answer (~8–14 h) — the platform of choice for
+    clinical or outbreak turnaround. Illumina/MGI are batch instruments: the run itself is 15–56 h, so total TAT is ~1.5–3
+    days. This is the trade-off against cost: <b>ONT is fastest; MGI/NovaSeq are cheapest but slowest and need large batches.</b>
+    TAT is per-run and independent of batch size; analysis assumes the standard Nextflow pipeline on a modest server.</p>
+  </div>
+</div>
+
+<script>
+// seqH = sequencing run hours (for ONT, time to sufficient amplicon depth — data streams in real time);
+// anaH = basecalling + demux + Nextflow analysis hours. Prep is a constant ~5 h for all platforms.
+const PLATFORMS = [
+  {g:"ONT",  name:"Flongle",              fc:90,   rpr:3,    seqH:4,  anaH:1, note:"portable, tiny batches; real-time"},
+  {g:"ONT",  name:"MinION / GridION",     fc:720,  rpr:40,   seqH:6,  anaH:1, note:"R10.4.1, decentralized; real-time"},
+  {g:"ONT",  name:"PromethION (1 FC)",    fc:1400, rpr:450,  seqH:10, anaH:2, note:"high-throughput ONT; real-time"},
+  {g:"Illumina", name:"iSeq 100",         fc:650,  rpr:4,    seqH:18, anaH:3, note:"benchtop, low output"},
+  {g:"Illumina", name:"MiSeq v2 (2×250)", fc:1250, rpr:15,   seqH:24, anaH:3, note:"native 2×250 merge"},
+  {g:"Illumina", name:"MiSeq v3 (2×300)", fc:1500, rpr:23,   seqH:56, anaH:3, note:"more reads, 2×300; slow run"},
+  {g:"Illumina", name:"NextSeq 2000 P3",  fc:3600, rpr:1100, seqH:24, anaH:4, note:"2×150 (most amplicons merge)"},
+  {g:"Illumina", name:"NovaSeq 6000 SP",  fc:3200, rpr:750,  seqH:30, anaH:4, note:"high output"},
+  {g:"Illumina", name:"NovaSeq 6000 S4",  fc:6800, rpr:8000, seqH:40, anaH:4, note:"max output, lowest $/read"},
+  {g:"MGI",  name:"DNBSEQ-G99 (PE150)",   fc:550,  rpr:140,  seqH:15, anaH:3, note:"fast benchtop"},
+  {g:"MGI",  name:"DNBSEQ-G400 (PE150)",  fc:850,  rpr:1500, seqH:40, anaH:4, note:"best value at scale"},
+];
+const PREP_H = 5;  // sample-to-tailed-library: lysis + 2 PCRs + cleanups + QC (same for all platforms)
+const DEFAULT_ITEMS = [
+  {grp:"Sample & lysis"},
+  {n:"DBS card + 3 mm punch", s:"amortized/sample", v:0.35},
+  {n:"Extraction-free lysis reagent", s:"heat/Chelex", v:0.10},
+  {grp:"Round-1 multiplex PCR (289-plex)"},
+  {n:"Hot-start multiplex master mix", s:"10–20 µL rxn", v:0.55},
+  {n:"Primer pool", s:"578 primers, amortized", v:0.20},
+  {grp:"Round-2 barcoding PCR"},
+  {n:"Barcoding master mix", s:"", v:0.40},
+  {n:"Dual-index barcode primers", s:"amortized", v:0.10},
+  {grp:"Clean-up & QC"},
+  {n:"SPRI beads", s:"0.8× cleanup", v:0.35},
+  {n:"Pooled-library QC", s:"Qubit, amortized", v:0.10},
+  {n:"Plasticware / tips", s:"", v:0.35},
+];
+const DEF = {plat:1, rps:100, batch:384};
+let items = clone(DEFAULT_ITEMS), state = {...DEF};
+function clone(x){return JSON.parse(JSON.stringify(x))}
+const $=id=>document.getElementById(id);
+const money=x=> x>=100? x.toFixed(0) : x>=10? x.toFixed(1) : x.toFixed(2);
+const kfmt=x=> x>=1e9?(x/1e9).toFixed(1)+"B" : x>=1e6?(x/1e6).toFixed(0)+"M" : x>=1e3?(x/1e3).toFixed(0)+"k" : ""+Math.round(x);
+
+function prepSum(){return items.reduce((a,it)=>a+(it.grp?0:(+it.v||0)),0)}
+function calc(fc,rprM,rps,batch){
+  const capacity=Math.min(9216, Math.floor(rprM*1e6/(rps*1000)));
+  const runs=Math.max(1, Math.ceil(batch/Math.max(1,capacity)));
+  const seqPer=runs*fc/batch;
+  const readsActual=rprM*1e6*runs/batch;
+  return {capacity,runs,seqPer,readsActual};
+}
+function tier(total){return total<=10? (total<=3?"ok":"edge") : "over";}
+function tierLabel(t){return t==="ok"?"within target":t==="edge"?"upper edge":"over target";}
+function tatH(p){return PREP_H + p.seqH + p.anaH;}
+function tatFmt(h){return h<24? h+" h" : (h/24)%1<0.05? Math.round(h/24)+" d" : (h/24).toFixed(1)+" d";}
+
+function renderItems(){
+  const tb=$("items"); tb.innerHTML="";
+  items.forEach((it,i)=>{
+    const tr=document.createElement("tr");
+    if(it.grp){tr.className="grp"; tr.innerHTML=`<td colspan="2">${it.grp}</td>`;}
+    else tr.innerHTML=`<td class="itname">${it.n} ${it.s?`<small>· ${it.s}</small>`:""}</td>
+      <td>$<input type="number" min="0" step="0.05" value="${(+it.v).toFixed(2)}" data-i="${i}"></td>`;
+    tb.appendChild(tr);
+  });
+  const ps=prepSum();
+  const sr=document.createElement("tr"); sr.className="sumrow";
+  sr.innerHTML=`<td>Prep &amp; consumables subtotal</td><td>$${ps.toFixed(2)}</td>`; tb.appendChild(sr);
+  const seq=window._seqPer||0;
+  const q=document.createElement("tr"); q.className="seqrow";
+  q.innerHTML=`<td>Sequencing (amortized flow cell)</td><td>$${money(seq)}</td>`; tb.appendChild(q);
+  const tot=ps+seq;
+  const t=document.createElement("tr"); t.className="sumrow big-total";
+  t.innerHTML=`<td>Total per sample</td><td>$${money(tot)}</td>`; tb.appendChild(t);
+  tb.querySelectorAll("input").forEach(inp=>inp.addEventListener("input",e=>{
+    items[+e.target.dataset.i].v=+e.target.value||0; update();
+  }));
+}
+function renderCompare(rps){
+  const tb=$("cmp"); tb.innerHTML=""; const ps=prepSum();
+  PLATFORMS.forEach((p,i)=>{
+    const c=calc(p.fc,p.rpr,rps,state.batch); const tot=ps+c.seqPer; const t=tier(tot);
+    const tr=document.createElement("tr"); if(i===state.plat) tr.className="active";
+    tr.innerHTML=`<td class="plat">${p.name} <small>${p.g}</small></td>
+      <td class="n">${kfmt(p.rpr*1e6)}</td>
+      <td class="n">${c.capacity.toLocaleString()}</td>
+      <td class="n">$${money(c.seqPer)}</td>
+      <td class="n"><b>$${money(tot)}</b></td>
+      <td class="n">${tatFmt(tatH(p))}</td>
+      <td><span class="pill ${t}">${t==="ok"?"$"+money(tot):tierLabel(t)}</span></td>`;
+    tb.appendChild(tr);
+  });
+}
+function update(){
+  const p=PLATFORMS[state.plat];
+  const fc=+$("fc").value, rprM=+$("rpr").value, rps=state.rps, batch=state.batch;
+  const c=calc(fc,rprM,rps,batch); window._seqPer=c.seqPer;
+  const ps=prepSum(), tot=ps+c.seqPer, t=tier(tot);
+  $("total").textContent=money(tot);
+  const b=$("badge"); b.className="badge "+t; b.textContent=tierLabel(t)+(c.runs>1?" · "+c.runs+" runs":"");
+  const th=tatH(p);
+  $("tat").innerHTML=`&#9201; ~${tatFmt(th)} turnaround <small>(prep ${PREP_H}h &#183; seq ${p.seqH}h &#183; analysis ${p.anaH}h)</small>`;
+  $("ss-samples").textContent=Math.min(batch,c.capacity).toLocaleString();
+  $("ss-depth").textContent=kfmt(c.readsActual);
+  $("ss-seq").textContent="$"+money(c.seqPer);
+  $("ss-prep").textContent="$"+money(ps);
+  // gauge: 0..15 scale
+  const pct=x=>Math.max(0,Math.min(100,x/15*100));
+  $("gband").style.left=pct(1)+"%"; $("gband").style.width=(pct(10)-pct(1))+"%";
+  $("gfill").style.width=pct(tot)+"%";
+  $("gfill").style.background=t==="over"?"var(--over)":t==="edge"?"linear-gradient(90deg,var(--teal),var(--gold))":"linear-gradient(90deg,var(--teal),var(--blue))";
+  $("gm1").style.left=pct(1)+"%"; $("gm10").style.left=pct(10)+"%";
+  renderItems(); renderCompare(rps);
+}
+function loadPlatform(i,keepEdits){
+  state.plat=+i; const p=PLATFORMS[i];
+  if(!keepEdits){$("fc").value=p.fc; $("rpr").value=p.rpr;}
+  $("plat-hint").textContent=p.g+" · "+p.note;
+}
+function initControls(){
+  const sel=$("platform");
+  let lastG="";
+  PLATFORMS.forEach((p,i)=>{
+    if(p.g!==lastG){const og=document.createElement("optgroup");og.label=p.g;og.id="og-"+p.g;sel.appendChild(og);lastG=p.g;}
+    const o=document.createElement("option");o.value=i;o.textContent=p.name;
+    sel.querySelector("#og-"+p.g).appendChild(o);
+  });
+  sel.value=state.plat;
+  sel.addEventListener("change",e=>{loadPlatform(e.target.value,false);update();});
+  $("fc").addEventListener("input",update);
+  $("rpr").addEventListener("input",update);
+  $("rps").addEventListener("input",e=>{state.rps=+e.target.value;$("rps-v").textContent=kfmt(state.rps*1000);update();});
+  $("batch").addEventListener("input",e=>{state.batch=+e.target.value;$("batch-v").textContent=state.batch.toLocaleString();update();});
+  $("reset").addEventListener("click",()=>{items=clone(DEFAULT_ITEMS);state={...DEF};syncUI();update();});
+  $("theme").addEventListener("click",()=>{
+    const r=document.documentElement;
+    const cur=r.getAttribute("data-theme")|| (matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+    const next=cur==="dark"?"light":"dark"; r.setAttribute("data-theme",next);
+  });
+}
+function syncUI(){
+  $("platform").value=state.plat; loadPlatform(state.plat,false);
+  $("rps").value=state.rps; $("rps-v").textContent=kfmt(state.rps*1000);
+  $("batch").value=state.batch; $("batch-v").textContent=state.batch.toLocaleString();
+}
+initControls(); syncUI(); update();
+</script>

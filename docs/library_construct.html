@@ -1,0 +1,161 @@
+<title>MalaForge Library Construct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#F1ECE3;--surface:#FBF8F2;--surface2:#EBE3D5;--ink:#231D19;--muted:#6C625A;--faint:#9A9084;
+ --blood:#9E2B25;--teal:#0E6E66;--gold:#8F6B1C;--blue:#3B6EA5;--line:#DED4C5;--line2:#C9BDAC;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#16120E;--surface:#201A15;--surface2:#2A231B;--ink:#F0E8DD;--muted:#B1A695;--faint:#7C7263;
+ --blood:#E06A5E;--teal:#5FC3B4;--gold:#D6A94A;--blue:#82AAD9;--line:#33291F;--line2:#463829;}}
+:root[data-theme="dark"]{--paper:#16120E;--surface:#201A15;--surface2:#2A231B;--ink:#F0E8DD;--muted:#B1A695;
+ --faint:#7C7263;--blood:#E06A5E;--teal:#5FC3B4;--gold:#D6A94A;--blue:#82AAD9;--line:#33291F;--line2:#463829;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:26px 22px 60px}
+.ey{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.18em;color:var(--blood);text-transform:uppercase}
+h1{font:700 29px "Spectral",Georgia,serif;line-height:1.05;margin:3px 0 5px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;max-width:74ch}
+h2{font:700 13px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--blood);
+ border-bottom:1px solid var(--line);padding-bottom:6px;margin:28px 0 12px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin:6px 0 10px;font:600 11px "IBM Plex Mono",monospace}
+.legend span{display:inline-flex;align-items:center;gap:6px;color:var(--muted)}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block;border:1px solid rgba(0,0,0,.15)}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:8px 0}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:6px 9px;font:600 10px "IBM Plex Mono",monospace;text-transform:uppercase}
+td{padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--surface)}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+.tagN{color:var(--teal);font-weight:700}.tagX{color:var(--gold);font-weight:700}
+.box{background:var(--surface);border:1px solid var(--line2);border-left:4px solid var(--teal);border-radius:6px;padding:12px 15px;margin:12px 0;font-size:13px}
+.box.key{border-left-color:var(--blood)}
+.box b{color:var(--ink)}
+.chk{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--teal)}
+.foot{margin-top:26px;border-top:1px solid var(--line);padding-top:12px;font:500 10.5px "IBM Plex Mono",monospace;color:var(--muted)}
+svg{max-width:100%;height:auto;display:block}
+figcaption{font-size:11.5px;color:var(--muted);margin-top:8px}
+</style>
+<div class="wrap">
+<div class="ey">MalaForge · library design</div>
+<h1>Sequencing library construct &amp; barcoding</h1>
+<p class="sub">The full molecule produced by the two-step tailed-amplicon workflow, showing exactly which
+regions are <span class="tagN">native to this panel's design</span> and which are <span class="tagX">standard
+external sequences</span> (universal linkers &amp; platform adapters) — and the confirmation that the sample
+barcodes do not conflict with any primer, tag, or the target genomes.</p>
+
+<h2>The construct (one sequenced molecule, top strand 5′→3′)</h2>
+<div class="legend">
+  <span><i class="sw" style="background:var(--muted)"></i>platform adapter — external (kit)</span>
+  <span><i class="sw" style="background:var(--blue)"></i>sample barcode — native (this panel)</span>
+  <span><i class="sw" style="background:var(--gold)"></i>CS1 / CS2 linker — external (Fluidigm)</span>
+  <span><i class="sw" style="background:var(--blood)"></i>gene primer — native</span>
+  <span><i class="sw" style="background:var(--teal)"></i>amplicon insert — native target</span>
+</div>
+<figure>
+<svg viewBox="0 0 1000 300" role="img" aria-label="Linear library construct: 5' platform adapter, forward sample barcode, CS1 linker, gene forward primer, amplicon insert, gene reverse primer (revcomp), CS2 linker (revcomp), reverse sample barcode (revcomp), 3' platform adapter">
+ <defs><style>
+  .seg{stroke:rgba(0,0,0,.18);stroke-width:1}
+  .nm{font-family:"IBM Plex Sans",sans-serif;font-weight:700;font-size:12px;fill:#fff;text-anchor:middle}
+  .nmd{font-family:"IBM Plex Sans",sans-serif;font-weight:700;font-size:11px;fill:var(--ink);text-anchor:middle}
+  .len{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--muted);text-anchor:middle}
+  .ori{font-family:"IBM Plex Mono",monospace;font-size:9px;text-anchor:middle}
+  .brk{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--muted);text-anchor:middle}
+ </style></defs>
+ <!-- strand line -->
+ <line x1="6" y1="118" x2="994" y2="118" stroke="var(--line2)" stroke-width="2"/>
+ <text x="2" y="112" class="len" text-anchor="start">5′</text>
+ <text x="998" y="112" class="len" text-anchor="end">3′</text>
+ <!-- segments: x,w,fill,name(white?),len,origin -->
+ <!-- 5' adapter -->
+ <rect class="seg" x="8"  y="96" width="86"  height="44" rx="4" fill="var(--muted)"/>
+ <text class="nm"  x="51"  y="122">adapter</text>
+ <text class="len" x="51"  y="156">platform</text><text class="ori" x="51" y="168" fill="var(--muted)">external</text>
+ <!-- fwd barcode -->
+ <rect class="seg" x="98" y="96" width="94"  height="44" rx="4" fill="var(--blue)"/>
+ <text class="nm"  x="145" y="118">barcode i</text><text class="nm" x="145" y="132" style="font-size:10px">(fwd)</text>
+ <text class="len" x="145" y="156">24 nt</text><text class="ori" x="145" y="168" fill="var(--blue)">NATIVE</text>
+ <!-- CS1 -->
+ <rect class="seg" x="196" y="96" width="86"  height="44" rx="4" fill="var(--gold)"/>
+ <text class="nm"  x="239" y="122">CS1</text>
+ <text class="len" x="239" y="156">22 nt</text><text class="ori" x="239" y="168" fill="var(--gold)">external</text>
+ <!-- gene F primer -->
+ <rect class="seg" x="286" y="96" width="78"  height="44" rx="4" fill="var(--blood)"/>
+ <text class="nm"  x="325" y="118">gene F</text><text class="nm" x="325" y="132" style="font-size:10px">primer</text>
+ <text class="len" x="325" y="156">~18–26 nt</text><text class="ori" x="325" y="168" fill="var(--blood)">NATIVE</text>
+ <!-- INSERT -->
+ <rect class="seg" x="368" y="90" width="264" height="56" rx="5" fill="var(--teal)"/>
+ <text class="nm"  x="500" y="116">AMPLICON INSERT</text><text class="nm" x="500" y="132" style="font-size:10px">target sequence</text>
+ <text class="len" x="500" y="160">species-specific · resistance / diversity / ID</text>
+ <text class="ori" x="500" y="172" fill="var(--teal)">NATIVE — the 289-amplicon panel</text>
+ <!-- gene R primer (rc) -->
+ <rect class="seg" x="636" y="96" width="78"  height="44" rx="4" fill="var(--blood)"/>
+ <text class="nm"  x="675" y="118">gene R</text><text class="nm" x="675" y="132" style="font-size:10px">primer ᴿᶜ</text>
+ <text class="len" x="675" y="156">~18–26 nt</text><text class="ori" x="675" y="168" fill="var(--blood)">NATIVE</text>
+ <!-- CS2 rc -->
+ <rect class="seg" x="718" y="96" width="86"  height="44" rx="4" fill="var(--gold)"/>
+ <text class="nm"  x="761" y="118">CS2</text><text class="nm" x="761" y="132" style="font-size:10px">ᴿᶜ</text>
+ <text class="len" x="761" y="156">22 nt</text><text class="ori" x="761" y="168" fill="var(--gold)">external</text>
+ <!-- rev barcode rc -->
+ <rect class="seg" x="808" y="96" width="94"  height="44" rx="4" fill="var(--blue)"/>
+ <text class="nm"  x="855" y="118">barcode j</text><text class="nm" x="855" y="132" style="font-size:10px">(rev) ᴿᶜ</text>
+ <text class="len" x="855" y="156">24 nt</text><text class="ori" x="855" y="168" fill="var(--blue)">NATIVE</text>
+ <!-- 3' adapter -->
+ <rect class="seg" x="906" y="96" width="86"  height="44" rx="4" fill="var(--muted)"/>
+ <text class="nm"  x="949" y="122">adapter</text>
+ <text class="len" x="949" y="156">platform</text><text class="ori" x="949" y="168" fill="var(--muted)">external</text>
+
+ <!-- demux annotation -->
+ <path d="M98,86 L98,74 L282,74 L282,86" fill="none" stroke="var(--blue)" stroke-width="1.2"/>
+ <text class="brk" x="190" y="68" fill="var(--blue)">demux reads barcode i, anchored on CS1 →</text>
+ <path d="M718,86 L718,74 L902,74 L902,86" fill="none" stroke="var(--blue)" stroke-width="1.2"/>
+ <text class="brk" x="810" y="68" fill="var(--blue)">← CS2-anchored, reads barcode j</text>
+ <path d="M368,222 L368,236 L632,236 L632,222" fill="none" stroke="var(--teal)" stroke-width="1.2"/>
+ <text class="brk" x="500" y="250" fill="var(--teal)">what the pipeline maps &amp; genotypes (CS1…CS2 trimmed off at demux)</text>
+</svg>
+<figcaption><b>Figure.</b> One sequenced molecule. Round-1 PCR builds <span class="tagX">CS1</span>–[gene
+primers + insert]–<span class="tagX">CS2</span>; round-2 barcoding PCR anneals to the CS1/CS2 linkers and
+appends the <span class="tagN">sample barcodes</span> + platform adapters. Reverse-side elements are shown
+reverse-complemented (ᴿᶜ) as they appear on the top strand.</figcaption>
+</figure>
+
+<h2>Region-by-region — length, origin, role</h2>
+<table>
+<tr><th>Region</th><th>~Length</th><th>Origin</th><th>Role / notes</th></tr>
+<tr><td>Platform adapter (5′ &amp; 3′)</td><td>kit-defined</td><td class="tagX">External</td><td>ONT / Illumina / MGI sequencing adapter, added in round-2 (or ligation). Not part of the read insert.</td></tr>
+<tr><td><b>Sample barcode i / j</b></td><td>24 nt each</td><td class="tagN">Native (this panel)</td><td>Combinatorial dual index (96 × 96 = 9,216). Set: <span class="mono">refs/barcodes/barcodes_96.tsv</span>. Read at demux.</td></tr>
+<tr><td>CS1 / CS2 universal linker</td><td>22 nt each</td><td class="tagX">External (Fluidigm)</td><td class="mono">CS1 ACACTGACGACATGGTTCTACA · CS2 TACGGTAGCAGAGACTTGGTCT</td></tr>
+<tr><td><b>Gene-specific primers F / R</b></td><td>~18–26 nt</td><td class="tagN">Native</td><td>The 289-amplicon panel; 3′ ends drive specificity (in-silico validated). CS1/CS2 are 5′ tails.</td></tr>
+<tr><td><b>Amplicon insert</b></td><td>≤400 bp core</td><td class="tagN">Native target</td><td>Species ID, resistance, diagnostic/CNV, diversity. This is what the pipeline maps &amp; genotypes.</td></tr>
+</table>
+
+<h2>Two-step assembly</h2>
+<div class="box"><b>Round 1 — target PCR.</b> Gene primers carry universal tails:
+<span class="mono">F = CS1 + geneF</span>, <span class="mono">R = CS2 + geneR</span>. Product =
+<span class="tagX">CS1</span>–<span class="tagN">amplicon</span>–<span class="tagX">CS2</span>. No barcodes or
+adapters yet; every amplicon now shares the same CS1/CS2 handles.<br><br>
+<b>Round 2 — barcoding PCR.</b> Primers anneal to CS1/CS2 and append the sample barcode + platform adapter:
+<span class="mono">P_fwd = adapter + barcode_i + CS1</span>, <span class="mono">P_rev = adapter + barcode_j + CS2</span>.
+Because these primers prime on the constant CS1/CS2 (not on the genome), they are panel-agnostic and add the
+same barcodes to every amplicon in the pool.</div>
+
+<h2>Design consistency — no conflict (verified)</h2>
+<div class="box key">The barcode set was checked against every other sequence in the construct and the target genomes:
+<ul style="margin:8px 0 0 20px">
+<li class="chk">✓ barcode set orthogonality — <b>min pairwise Hamming = 10</b> (safe for 2-mismatch demux)</li>
+<li class="chk">✓ barcodes vs CS1 / CS2 — <b>≥ 8 nt different</b> (worst case) → CS-anchored demux is unambiguous</li>
+<li class="chk">✓ barcodes vs all <b>575 panel primers</b> — <b>0</b> within 3 mismatches → no mispriming risk</li>
+<li class="chk">✓ CS1 / CS2 in the pan-reference (6 nuclear + 6 mito + human) — <b>0 occurrences</b> (all 4 orientations) → CS tails never prime on target DNA</li>
+</ul>
+<div style="margin-top:8px;font-size:12.5px;color:var(--muted)">Re-run the check any time barcodes change:
+<span class="mono">analysis/bin/check_barcode_conflicts.py</span>.</div></div>
+
+<div class="box"><b>What was designed where.</b> The panel-design work fixed the <b>scheme</b> (CS1/CS2 tags, a
+combinatorial dual 24-nt barcode plan) and the <b>gene primers + targets</b> — those are native. The actual
+<b>barcode sequences</b> were finalised here as an orthogonal, conflict-checked set
+(<span class="mono">generate_barcodes.py</span> → <span class="mono">barcodes_96.tsv</span>); swap in your
+reagent barcodes for a real run and re-run the check. CS1/CS2 and the sequencing adapters are standard
+external sequences, deliberately chosen so the barcoding chemistry is off-the-shelf.</div>
+
+<div class="foot">MalaForge · library construct v1.0 · CS1/CS2 = Fluidigm universal linkers ·
+barcodes native (orthogonal, conflict-checked) · adapters platform-specific · see DESIGN-DOSSIER §17 and
+analysis/MANUAL.md §4b (demultiplexing).</div>
+</div>

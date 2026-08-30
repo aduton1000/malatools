@@ -1,0 +1,231 @@
+<title>MalaCall Pipeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#F1ECE3;--surface:#FBF8F2;--surface2:#EBE3D5;--ink:#231D19;--muted:#6C625A;--faint:#9A9084;
+ --blood:#9E2B25;--teal:#0E6E66;--gold:#8F6B1C;--blue:#3B6EA5;--line:#DED4C5;--line2:#C9BDAC;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --paper:#16120E;--surface:#201A15;--surface2:#2A231B;--ink:#F0E8DD;--muted:#B1A695;--faint:#7C7263;
+ --blood:#E06A5E;--teal:#5FC3B4;--gold:#D6A94A;--blue:#82AAD9;--line:#33291F;--line2:#463829;}}
+:root[data-theme="dark"]{--paper:#16120E;--surface:#201A15;--surface2:#2A231B;--ink:#F0E8DD;--muted:#B1A695;
+ --faint:#7C7263;--blood:#E06A5E;--teal:#5FC3B4;--gold:#D6A94A;--blue:#82AAD9;--line:#33291F;--line2:#463829;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 22px 60px}
+.ey{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.18em;color:var(--blood);text-transform:uppercase}
+h1{font:700 30px "Spectral",Georgia,serif;line-height:1.05;margin:3px 0 4px;text-wrap:balance}
+.sub{color:var(--muted);font-size:14px;max-width:70ch}
+.badge{display:inline-block;margin-top:10px;font:600 11px "IBM Plex Mono",monospace;padding:3px 11px;border-radius:20px;
+ background:color-mix(in srgb,var(--teal) 16%,transparent);color:var(--teal)}
+h2{font:700 13px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--blood);
+ border-bottom:1px solid var(--line);padding-bottom:6px;margin:30px 0 12px}
+figure{margin:8px 0}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 4px;font:600 11px "IBM Plex Mono",monospace;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:6px 0}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:6px 9px;font:600 10px "IBM Plex Mono",monospace;
+ letter-spacing:.03em;text-transform:uppercase}
+td{padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--surface)}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:11.5px}
+.stg{font-weight:700}
+.scroll{overflow-x:auto}
+.foot{margin-top:28px;border-top:1px solid var(--line);padding-top:12px;font:500 10.5px "IBM Plex Mono",monospace;color:var(--muted)}
+svg{max-width:100%;height:auto;display:block}
+</style>
+<div class="wrap">
+<div class="ey">MalaCall · pan-Plasmodium analysis</div>
+<h1>MalaCall — end-to-end analysis &amp; reporting</h1>
+<p class="sub">One blood-spot FASTQ in; species ID (6 taxa, mixed infections), drug-resistance genotypes,
+RDT-escape deletions &amp; gene amplification, parasite diversity, and <i>P. knowlesi</i> subpopulation out —
+attributed per species, then rolled up into a surveillance dashboard.</p>
+<div class="badge">✓ validated end-to-end: 62 / 62 ground-truth assertions on simulated data</div>
+
+<h2>Pipeline DAG</h2>
+<div class="legend">
+  <span><i class="dot" style="background:var(--muted)"></i>pre-process</span>
+  <span><i class="dot" style="background:var(--teal)"></i>species ID</span>
+  <span><i class="dot" style="background:var(--blood)"></i>resistance</span>
+  <span><i class="dot" style="background:var(--gold)"></i>diagnostic / CNV</span>
+  <span><i class="dot" style="background:var(--blue)"></i>diversity / cluster</span>
+  <span><i class="dot" style="background:var(--ink)"></i>reporting</span>
+</div>
+<figure>
+<svg viewBox="0 0 1000 760" role="img" aria-label="Pipeline directed acyclic graph: FASTQ to MAP to SPECIES_ID, fanning out to RESISTANCE, CNV_DELETION, DIVERSITY and PK_CLUSTER, converging to per-sample REPORT and then COHORT surveillance">
+ <defs>
+  <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+    <path d="M0,0 L8,4.5 L0,9 z" fill="currentColor"/></marker>
+  <style>
+   .node rect{rx:9;stroke-width:1.6}
+   .t{font-family:"IBM Plex Sans",sans-serif;font-weight:700;font-size:14px;fill:var(--ink)}
+   .tool{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:var(--muted)}
+   .desc{font-family:"IBM Plex Sans",sans-serif;font-size:11px;fill:var(--muted)}
+   .out{font-family:"IBM Plex Mono",monospace;font-size:10px;fill:var(--faint)}
+   .edge{stroke:var(--line2);stroke-width:1.8;fill:none;color:var(--line2)}
+   .elab{font-family:"IBM Plex Mono",monospace;font-size:9.5px;fill:var(--muted)}
+  </style>
+ </defs>
+
+ <!-- edges (drawn first) -->
+ <g class="edge">
+  <path d="M500,86 L500,116" marker-end="url(#ar)"/>
+  <path d="M500,178 L500,208" marker-end="url(#ar)"/>
+  <!-- species_id fan-out -->
+  <path d="M485,300 C320,335 131,330 131,362" marker-end="url(#ar)"/>
+  <path d="M495,300 C430,335 377,330 377,362" marker-end="url(#ar)"/>
+  <path d="M505,300 C580,335 623,330 623,362" marker-end="url(#ar)"/>
+  <path d="M515,300 C700,335 869,330 869,362" marker-end="url(#ar)"/>
+  <!-- converge to report -->
+  <path d="M131,452 C131,505 440,508 475,528" marker-end="url(#ar)"/>
+  <path d="M377,452 C377,505 470,508 490,528" marker-end="url(#ar)"/>
+  <path d="M623,452 C623,505 540,508 512,528" marker-end="url(#ar)"/>
+  <path d="M869,452 C869,505 560,508 525,528" marker-end="url(#ar)"/>
+  <path d="M500,590 L500,626" marker-end="url(#ar)"/>
+  <!-- manifest side input -->
+  <path d="M120,147 L438,147" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+ </g>
+ <g class="edge" fill="none">
+  <text class="elab" x="512" y="104">reads (FASTQ)</text>
+  <text class="elab" x="512" y="196">sorted BAM</text>
+  <text class="elab" x="300" y="333" text-anchor="middle">BAM + species call</text>
+  <text class="elab" x="512" y="612">per-species tables</text>
+  <text class="elab" x="280" y="141" text-anchor="middle" fill="var(--faint)">amplicon coords</text>
+ </g>
+
+ <!-- manifest (one-time) -->
+ <g class="node" color="var(--muted)">
+  <rect x="8" y="120" width="112" height="54" fill="var(--surface2)" stroke="var(--line2)"/>
+  <text class="t" x="18" y="142" style="font-size:12px">build_manifest</text>
+  <text class="tool" x="18" y="158">minimap2 · once</text>
+  <text class="out" x="18" y="170">amplicons.tsv</text>
+ </g>
+
+ <!-- FASTQ -->
+ <g class="node">
+  <rect x="415" y="40" width="170" height="46" fill="var(--surface)" stroke="var(--line2)"/>
+  <text class="t" x="500" y="60" text-anchor="middle">FASTQ (per sample)</text>
+  <text class="tool" x="500" y="77" text-anchor="middle">barcoded, demux'd amplicons</text>
+ </g>
+ <!-- MAP -->
+ <g class="node" color="var(--muted)">
+  <rect x="400" y="116" width="200" height="62" fill="var(--surface)" stroke="var(--muted)"/>
+  <text class="t" x="412" y="138">MAP</text>
+  <text class="tool" x="412" y="153">minimap2 + samtools</text>
+  <text class="desc" x="412" y="169">align to 6 nuclear + 6 mito refs</text>
+ </g>
+ <!-- SPECIES_ID -->
+ <g class="node" color="var(--teal)">
+  <rect x="400" y="238" width="200" height="62" fill="var(--surface)" stroke="var(--teal)"/>
+  <text class="t" x="412" y="260">SPECIES_ID</text>
+  <text class="tool" x="412" y="275">cox3 read tally</text>
+  <text class="desc" x="412" y="291">6 taxa + mixed-infection %</text>
+ </g>
+
+ <!-- fan-out row (4 evenly-spaced 232-wide boxes) -->
+ <g class="node" color="var(--blood)">
+  <rect x="15" y="362" width="232" height="90" fill="var(--surface)" stroke="var(--blood)"/>
+  <text class="t" x="27" y="384">RESISTANCE</text>
+  <text class="tool" x="27" y="399">pysam · codon pileup</text>
+  <text class="desc" x="27" y="415">genotype every marker codon</text>
+  <text class="desc" x="27" y="429" style="font-weight:600;fill:var(--blood)">call vs the SENSITIVE allele</text>
+  <text class="out" x="27" y="444">resistance.tsv · drugs.tsv</text>
+ </g>
+ <g class="node" color="var(--gold)">
+  <rect x="261" y="362" width="232" height="90" fill="var(--surface)" stroke="var(--gold)"/>
+  <text class="t" x="273" y="384">CNV_DELETION</text>
+  <text class="tool" x="273" y="399">pysam · depth ratio</text>
+  <text class="desc" x="273" y="415">amplification +</text>
+  <text class="desc" x="273" y="429">pfhrp2 / pfhrp3 RDT escape</text>
+  <text class="out" x="273" y="444">cnv.tsv</text>
+ </g>
+ <g class="node" color="var(--blue)">
+  <rect x="507" y="362" width="232" height="90" fill="var(--surface)" stroke="var(--blue)"/>
+  <text class="t" x="519" y="384">DIVERSITY</text>
+  <text class="tool" x="519" y="399">pysam · numpy</text>
+  <text class="desc" x="519" y="415">microhaplotypes →</text>
+  <text class="desc" x="519" y="429">COI &amp; heterozygosity</text>
+  <text class="out" x="519" y="444">diversity · alleles · consensus.tsv</text>
+ </g>
+ <g class="node" color="var(--blue)">
+  <rect x="753" y="362" width="232" height="90" fill="var(--surface)" stroke="var(--blue)"/>
+  <text class="t" x="765" y="384">PK_CLUSTER <tspan class="tool">[if Pk]</tspan></text>
+  <text class="tool" x="765" y="399">pysam · fixed-SNP alleles</text>
+  <text class="desc" x="765" y="415">Mf / Mn / cluster-3</text>
+  <text class="desc" x="765" y="429">subpopulation call</text>
+  <text class="out" x="765" y="444">cluster.tsv</text>
+ </g>
+
+ <!-- REPORT -->
+ <g class="node" color="var(--ink)">
+  <rect x="400" y="528" width="200" height="62" fill="var(--surface2)" stroke="var(--ink)"/>
+  <text class="t" x="412" y="550">REPORT</text>
+  <text class="tool" x="412" y="565">per-sample clinical HTML</text>
+  <text class="out" x="412" y="581">&lt;sample&gt;.report.html</text>
+ </g>
+ <!-- COHORT -->
+ <g class="node" color="var(--ink)">
+  <rect x="380" y="626" width="240" height="62" fill="var(--surface2)" stroke="var(--ink)"/>
+  <text class="t" x="392" y="648">COHORT</text>
+  <text class="tool" x="392" y="663">surveillance dashboard (all samples)</text>
+  <text class="out" x="392" y="679">cohort.tsv · cohort.html</text>
+ </g>
+ <!-- RELATEDNESS (cohort-level, consumes DIVERSITY tables across all samples) -->
+ <g class="edge">
+  <path d="M700,452 C820,500 815,560 815,624" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <text class="elab" x="822" y="540">alleles + consensus (all samples)</text>
+ </g>
+ <g class="node" color="var(--blue)">
+  <rect x="655" y="626" width="330" height="62" fill="var(--surface2)" stroke="var(--blue)"/>
+  <text class="t" x="667" y="648">RELATEDNESS <tspan class="tool">[cohort]</tspan></text>
+  <text class="tool" x="667" y="663">ML COI (inclusion–exclusion) · IBS-moment r</text>
+  <text class="out" x="667" y="679">coi.tsv · relatedness.tsv · export/ (McCOIL, Dcifer)</text>
+ </g>
+</svg>
+<figcaption style="font-size:11px;color:var(--muted);margin-top:6px">Each sample flows MAP → SPECIES_ID; the
+species call then fans out to four independent, per-species analyses that reconverge into a clinical report,
+and all samples roll up into a cohort surveillance summary plus a cohort COI / relatedness analysis. Solid
+arrows carry data; the dashed arrows are the one-time amplicon manifest every stage consults and the
+per-sample diversity tables the relatedness stage pools across the whole cohort.</figcaption>
+</figure>
+
+<h2>Stages — tool, action, output</h2>
+<div class="scroll">
+<table>
+<tr><th>Stage</th><th>Tool</th><th>What it does</th><th>Output</th></tr>
+<tr><td class="stg">DEMUX <span class="mono" style="color:var(--muted)">[optional]</span></td><td class="mono">demux.py</td><td>ONT custom-barcode runs only: split a pooled FASTQ by the panel's combinatorial 24-nt barcodes (CS1/CS2-anchored, both orientations, mismatch-tolerant), trimming to the amplicon. Native ONT barcodes are already demuxed by MinKNOW and skip this.</td><td class="mono">per-sample fastq.gz · demux_stats.tsv</td></tr>
+<tr><td class="stg">build_manifest</td><td class="mono">minimap2 + in-silico PCR</td><td>One-time index: locate all 289 amplicons on the pan-reference (extract each amplicon, map for exact coordinates).</td><td class="mono">amplicons.tsv / .bed</td></tr>
+<tr><td class="stg">MAP</td><td class="mono">minimap2 (map-ont / sr) → samtools sort/index</td><td>Align each sample's reads to the combined 6-nuclear + 6-mito reference; sorted, indexed BAM.</td><td class="mono">&lt;s&gt;.bam</td></tr>
+<tr><td class="stg" style="color:var(--teal)">SPECIES_ID</td><td class="mono">pysam</td><td>Tally mito <b>cox3</b> reads per taxon (counted at MAPQ 0 — cox3 is diagnostic by which contig it maps to). Proportions → present/absent; &gt;1 present = mixed infection.</td><td class="mono">&lt;s&gt;.species.tsv</td></tr>
+<tr><td class="stg" style="color:var(--blood)">RESISTANCE</td><td class="mono">pysam</td><td>At every marker codon, build the codon from spanning reads, translate, and call <b>vs the sensitive allele</b> — so reference-is-mutant loci (pmdhfr 58/114) are correct. Aggregates to a per-drug interpretation.</td><td class="mono">&lt;s&gt;.resistance.tsv · &lt;s&gt;.drugs.tsv</td></tr>
+<tr><td class="stg" style="color:var(--gold)">CNV_DELETION</td><td class="mono">pysam</td><td>Read-depth of each CNV/deletion amplicon ÷ same-species single-copy controls → gene <b>amplification</b> (copy ratio) and <b>pfhrp2/pfhrp3 deletion</b> (RDT escape) when depth ≈ 0.</td><td class="mono">&lt;s&gt;.cnv.tsv</td></tr>
+<tr><td class="stg" style="color:var(--blue)">DIVERSITY</td><td class="mono">pysam · numpy</td><td>Per diversity amplicon: find variable positions → count microhaplotypes → per-locus alleles &amp; He; within-host <b>COI</b> per species (90th-pct estimator). Also emits the per-locus <b>allele</b> and majority-<b>consensus</b> tables the cohort relatedness stage consumes.</td><td class="mono">&lt;s&gt;.diversity.tsv · &lt;s&gt;.microhap.tsv · &lt;s&gt;.alleles.tsv · &lt;s&gt;.consensus.tsv</td></tr>
+<tr><td class="stg" style="color:var(--blue)">PK_CLUSTER</td><td class="mono">pysam</td><td>Read the fixed cluster-diagnostic SNP alleles (chr1 C1A, chr6 C2J, chr8 cap380) → vote <b>Mf / Mn / cluster-3</b>. Runs only when Pk is present.</td><td class="mono">&lt;s&gt;.cluster.tsv</td></tr>
+<tr><td class="stg">REPORT</td><td class="mono">python</td><td>Combine all per-sample tables into a clinical one-page HTML (species, per-species drug table, deletions/CNV, COI, cluster).</td><td class="mono">&lt;s&gt;.report.html</td></tr>
+<tr><td class="stg">COHORT</td><td class="mono">python</td><td>Aggregate all samples → species distribution, per-drug resistance frequency, RDT-escape/amplification frequency, COI distribution.</td><td class="mono">cohort.tsv · cohort.html</td></tr>
+<tr><td class="stg" style="color:var(--blue)">RELATEDNESS <span class="mono" style="color:var(--muted)">[cohort]</span></td><td class="mono">relatedness.py</td><td>Cohort-level, dependency-free. <b>ML COI</b> per sample/species by the inclusion–exclusion probability that <i>m</i> clones cover the observed allele set given population frequencies (the categorical idea behind THE REAL McCOIL), regularised so the likelihood has an interior maximum. <b>Pairwise relatedness r</b> by a frequency-adjusted IBS-moment on population-informative microhaplotypes (built from the cross-sample consensus). Also <b>exports</b> the McCOIL categorical matrix and Dcifer long table for publication-grade runs.</td><td class="mono">coi.tsv · relatedness.tsv · related_pairs.tsv · export/{realmccoil_*, dcifer_input}.tsv</td></tr>
+</table>
+</div>
+
+<h2>How to run</h2>
+<table>
+<tr><th>Mode</th><th>Command</th></tr>
+<tr><td>Install the CLI</td><td class="mono">pip install -e .   →   malacall --help</td></tr>
+<tr><td>Samplesheet from a run folder</td><td class="mono">malacall samplesheet --platform ont|illumina|mgi --run-dir RUN --out samples.csv</td></tr>
+<tr><td>Run the pipeline</td><td class="mono">malacall run --samplesheet samples.csv --outdir results --platform ont</td></tr>
+<tr><td>Single sample (no Nextflow)</td><td class="mono">malacall sample --fastq S.fastq.gz --sample S --outdir results --platform ont</td></tr>
+<tr><td>Cohort roll-up</td><td class="mono">malacall cohort results my_survey</td></tr>
+<tr><td>Cohort COI + relatedness</td><td class="mono">malacall relatedness results my_survey</td></tr>
+<tr><td>Validate (simulated truth)</td><td class="mono">python3 test/simulate.py … &amp;&amp; python3 test/validate.py sim out  → 62/62 PASS</td></tr>
+</table>
+<p style="font-size:11px;color:var(--muted);margin:8px 0 0"><b>On <span class="mono">-profile localpy</span>:</b>
+it only sets which local <span class="mono">python3</span> (the one with pysam/numpy/pandas) runs the stages — edit its
+path in <span class="mono">nextflow.config</span> to your own env, or use <span class="mono">--python &lt;path&gt;</span>
+or <span class="mono">-profile conda</span>/<span class="mono">docker</span>. <span class="mono">-profile captureforge</span>
+is a <i>retained alias</i> for the same thing; it is <i>not</i> the CaptureForge software (the analysis calls nothing
+from it) — that env was first built for the panel <i>design</i> work, where CaptureForge was actually used, and is
+simply reused here.</p>
+
+<div class="foot">MalaCall · pan-Plasmodium analysis pipeline v1.0 · Nextflow DSL2 + Python (pysam/numpy) · in-silico
+validated (62/62) · research pipeline, wet-lab pilot pending · full docs in analysis/MANUAL.md</div>
+</div>

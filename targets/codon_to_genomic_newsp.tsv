@@ -1,0 +1,12 @@
+gene	gene_id	contig	strand	marker_type	codon	ref_aa	wt_aa	ref_status	genomic_start	genomic_end	note	drugs
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	57	F	F	REF=WT	1292021	1292023	F57L; ~PfN51	pyrimethamine/SP
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	58	R	S	REF_CARRIES_NONWT(R)	1292024	1292026	S58R; ~PfC59R; REF carries R	pyrimethamine/SP
+pmdhfr	PmUG01_dhfr	NC_041779.1	+	SNP	114	N	S	REF_CARRIES_NONWT(N)	1292192	1292194	S114N; ~PfS108N; REF carries N	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	15	A	A	REF=WT	762499	762501	A15S	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	57	F	F	REF=WT	762625	762627	F57L; ~PfN51	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	58	S	S	REF=WT	762628	762630	S58R; ~PfC59R	pyrimethamine/SP
+pocdhfr	PocGH01_dhfr	LT594586.1	+	SNP	113	S	S	REF=WT	762793	762795	S113N/T; ~PfS108N	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	15	A	A	REF=WT	843857	843859	A15S	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	57	F	F	REF=WT	843983	843985	F57L; ~PfN51	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	58	S	S	REF=WT	843986	843988	S58R; ~PfC59R	pyrimethamine/SP
+powdhfr	PowCR01_dhfr	LT594509.1	+	SNP	113	S	S	REF=WT	844151	844153	S113N/T; ~PfS108N	pyrimethamine/SP

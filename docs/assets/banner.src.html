@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset=utf-8>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1280px;height:400px;overflow:hidden}
+  .b{position:relative;width:1280px;height:400px;
+     background:
+       radial-gradient(1100px 500px at 82% -10%, rgba(14,110,102,.20), transparent 60%),
+       radial-gradient(900px 500px at 8% 120%, rgba(158,43,37,.22), transparent 55%),
+       linear-gradient(135deg,#171009 0%,#120E0A 55%,#0E0B08 100%);
+     color:#F1ECE3;font-family:"IBM Plex Sans",sans-serif;
+     padding:52px 64px;display:flex;flex-direction:column;justify-content:space-between}
+  .top{display:flex;align-items:center;gap:14px}
+  .dna{width:34px;height:34px;flex:none}
+  .ey{font:600 12.5px "IBM Plex Mono",monospace;letter-spacing:.34em;color:#D6A94A;text-transform:uppercase}
+  .wm{font:800 74px/0.98 "Spectral",Georgia,serif;letter-spacing:-.5px;margin-top:6px}
+  .wm .dot{color:#E06A5E}
+  .wm .c2{color:#5FC3B4}
+  .sub{font:500 20px "IBM Plex Sans";color:#C9BEB0;margin-top:12px;max-width:760px}
+  .rule{height:3px;width:118px;background:linear-gradient(90deg,#E06A5E,#D6A94A);border-radius:3px;margin-top:20px}
+  .foot{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .taxa{display:flex;gap:20px}
+  .tx{display:flex;align-items:center;gap:8px;font:600 14.5px "IBM Plex Mono",monospace;color:#E7DED0}
+  .tx i{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .chip{margin-left:auto;font:600 13px "IBM Plex Mono",monospace;color:#0E100C;background:#5FC3B4;
+        padding:6px 14px;border-radius:30px}
+</style></head>
+<body>
+<div class="b">
+  <div>
+    <div class="top">
+      <svg class="dna" viewBox="0 0 32 32" fill="none" stroke="#D6A94A" stroke-width="2.1" stroke-linecap="round">
+        <path d="M9 3c0 8 14 10 14 13S9 21 9 29"/><path d="M23 3c0 8-14 10-14 13s14 3 14 11"/>
+        <path d="M10.5 8h11M11 13h10M11 19h10M10.5 24h11" stroke-width="1.7"/>
+      </svg>
+      <span class="ey">Pan-Plasmodium Amplicon Sequencing</span>
+    </div>
+    <div class="wm">MalaForge <span class="dot">·</span> <span class="c2">MalaCall</span></div>
+    <div class="sub">One low-cost assay to detect, speciate &amp; drug-resistance–profile all five human malaria parasites — from a single blood spot.</div>
+    <div class="rule"></div>
+  </div>
+  <div class="foot">
+    <div class="taxa">
+      <span class="tx"><i style="background:#E06A5E"></i>P. falciparum</span>
+      <span class="tx"><i style="background:#D6A94A"></i>P. vivax</span>
+      <span class="tx"><i style="background:#5FC3B4"></i>P. ovale</span>
+      <span class="tx"><i style="background:#82AAD9"></i>P. malariae</span>
+      <span class="tx"><i style="background:#C9BEB0"></i>P. knowlesi</span>
+    </div>
+    <span class="chip">289 amplicons · ≤400 bp · 1 pool</span>
+  </div>
+</div>
+</body></html>

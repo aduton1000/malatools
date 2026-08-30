@@ -1,0 +1,93 @@
+# ── OS / editor clutter ────────────────────────────────────────────────
+.DS_Store
+._*
+.AppleDouble
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# ── Python ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg-link
+__editable__.*
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# ── Secrets / credentials (never commit) ───────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+*_key
+*_secret*
+*credential*
+*.p12
+id_rsa*
+
+# ── Nextflow run artifacts (regenerable; embed absolute machine paths) ──
+.nextflow/
+.nextflow.log*
+**/work/
+analysis/results/
+analysis/results_*/
+**/.nextflow*
+timeline*.html
+trace*.txt
+
+# ── Dev scratch (one-off scripts, logs; contain machine/cross-project paths) ──
+scratch/
+**/scratch/
+*.log
+
+# ── Generated test data & outputs (recreate with `malacall validate`) ──
+analysis/test/sim/
+analysis/test/out/
+analysis/test/demux/
+analysis/test/runsim/
+analysis/manifest/*.fa
+analysis/manifest/*.bed
+
+# ── Generated document intermediates (source is the .md / .html) ───────
+analysis/MANUAL.html
+docs/.sf_light.html
+**/*.sf_light.html
+
+
+# ── Raw reference genomes (~250 MB; re-download with `malaforge fetch-refs`) ──
+#    Analysis only needs the committed refs/pan_reference.fa.gz; these are design-only.
+refs/nuclear/
+refs/anno/
+
+
+# ── Proposal / panel IP — kept LOCAL, never committed (primer sequences, panel
+#    design, ordering workbook, design dossier). Restore/keep locally as needed. ──
+design/panel_tailed.tsv
+design/panel_pools.tsv
+design/panel_qc_dimers.tsv
+design/module_*.tsv
+analysis/manifest/amplicons.tsv
+analysis/manifest/amplicons.paf
+analysis/refs/pk_diag_panel.tsv
+order/PANPLASMO-ORDER-WORKBOOK.xlsx
+order/bulk_*.csv
+order/demux_barcode_map.csv
+docs/DESIGN-DOSSIER.html
+docs/DESIGN-DOSSIER.pdf
+docs/.dossier_light.html
+docs/DESIGN-PLAN.md
+docs/DESIGN-REPORT.md
+docs/summary_figure.html
+docs/pan_plasmodium_summary.pdf
+docs/pan_plasmodium_summary.png
+
+# ── Keep (explicitly NOT ignored): panel TSVs, refs, barcodes, order/,
+#    docs/*.html + *.pdf deliverables, MANUAL.md, malatools/, pyproject.toml

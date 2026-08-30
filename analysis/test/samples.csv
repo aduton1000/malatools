@@ -1,0 +1,14 @@
+sample,fastq
+S10_Pf_clonalB,analysis/test/sim/reads/S10_Pf_clonalB.fastq.gz
+S11_Pv,analysis/test/sim/reads/S11_Pv.fastq.gz
+S12_Pv,analysis/test/sim/reads/S12_Pv.fastq.gz
+S13_Pv,analysis/test/sim/reads/S13_Pv.fastq.gz
+S1_Pf_multidrug,analysis/test/sim/reads/S1_Pf_multidrug.fastq.gz
+S2_Pf_sensitive,analysis/test/sim/reads/S2_Pf_sensitive.fastq.gz
+S3_PfPv_mixed,analysis/test/sim/reads/S3_PfPv_mixed.fastq.gz
+S4_Pm_resistant,analysis/test/sim/reads/S4_Pm_resistant.fastq.gz
+S5_Pm_sensitive,analysis/test/sim/reads/S5_Pm_sensitive.fastq.gz
+S6_Pk_Mn,analysis/test/sim/reads/S6_Pk_Mn.fastq.gz
+S7_PocPow_mixed,analysis/test/sim/reads/S7_PocPow_mixed.fastq.gz
+S8_negative,analysis/test/sim/reads/S8_negative.fastq.gz
+S9_Pf_clonalA,analysis/test/sim/reads/S9_Pf_clonalA.fastq.gz
