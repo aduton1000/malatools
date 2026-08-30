@@ -59,7 +59,7 @@ Use an environment with `pysam`, `numpy`, `pandas`, `minimap2`, `samtools` (and 
 `malacall run`). From the repository root:
 
 ```bash
-pip install -e .          # installs the `malaforge` and `malacall` commands
+pip install -e .          # installs the malatools package → the `malaforge` + `malacall` commands
 malacall --version
 malacall --help
 ```
