@@ -1,19 +1,26 @@
 cff-version: 1.2.0
+message: "If you use MalaForge or MalaCall, please cite it as below."
 title: "MalaForge & MalaCall: a low-cost pan-Plasmodium amplicon assay and analysis pipeline"
-message: "If you use this software, please cite it using the metadata from this file."
-type: software
-authors:
-  - family-names: Adu
-    given-names: Bright
-repository-code: "https://github.com/aduton1000/malatools"
 abstract: >-
   MalaForge is an amplicon-panel design toolkit and MalaCall an end-to-end analysis and reporting
-  pipeline for a single low-cost sequencing assay covering all five human malaria parasites
+  pipeline for a single low-cost sequencing assay covering all human malaria parasites
   (Plasmodium falciparum, P. vivax, P. ovale curtisi, P. ovale wallikeri, P. malariae, P. knowlesi).
   It provides species identification, per-species drug-resistance genotyping, pfhrp2/3 deletion and
   gene-amplification detection, parasite diversity and complexity-of-infection, P. knowlesi
-  subpopulation typing, and cohort-level relatedness — on Oxford Nanopore, Illumina and MGI platforms.
+  subpopulation typing, and cohort-level relatedness on Oxford Nanopore, Illumina and MGI platforms.
+authors:
+  - family-names: "Adu"
+    given-names: "Bright"
+    alias: "aduton1000"
+    orcid: "https://orcid.org/0000-0002-3622-2137"
+    affiliation: "Genomics & Bioinformatics Core, Noguchi Memorial Institute for Medical Research, University of Ghana, Legon, Ghana"
+version: 1.0.0
+date-released: "2026-08-30"
+license: MIT
+type: software
+repository-code: "https://github.com/aduton1000/malatools"
 keywords:
+  - bioinformatics
   - malaria
   - Plasmodium
   - amplicon sequencing
@@ -21,6 +28,3 @@ keywords:
   - genomic surveillance
   - complexity of infection
   - nanopore
-version: "1.0.0"
-date-released: "2026-08-30"
-license: MIT
